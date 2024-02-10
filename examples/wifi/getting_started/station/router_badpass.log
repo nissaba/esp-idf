@@ -1,0 +1,2076 @@
+Executing action: monitor
+Running idf_monitor in directory /Users/******/esp/esp-idf/examples/wifi/getting_started/station
+Executing "/Users/******/.espressif/python_env/idf5.1_py3.9_env/bin/python /Users/******/esp/v5.1-rc2/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem244301 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --decode-panic backtrace /Users/******/esp/esp-idf/examples/wifi/getting_started/station/build/wifi_station.elf -m '/Users/******/.espressif/python_env/idf5.1_py3.9_env/bin/python' '/Users/******/esp/v5.1-rc2/esp-idf/tools/idf.py' '-p' '/dev/cu.usbmodem244301'"...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038590a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x170c
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF v5.1-rc2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Feb 10 2024 12:54:58[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=23640h (144960) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=00033668 vaddr=3fc90600 size=02968h ( 10600) load[0m
+[0;32mI (119) esp_image: segment 2: paddr=00035fd8 vaddr=40380000 size=0a040h ( 41024) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=8b6c8h (571080) map[0m
+[0;32mI (222) esp_image: segment 4: paddr=000cb6f0 vaddr=4038a040 size=06544h ( 25924) load[0m
+[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+V (244) mmap: after coalescing, 1 regions are left[0m
+[0;32mI (244) cpu_start: Pro cpu up.[0m
+D (253) clk: RTC_SLOW_CLK calibration value: 3922970[0m
+V CACHE_ERR: access error intr clr & ena mask is: 0x3f
+V CACHE_ERR: illegal error intr clr & ena mask is: 0x23
+[0;32mI (262) cpu_start: Pro cpu start user code[0m
+[0;32mI (265) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (269) cpu_start: Application information:[0m
+[0;32mI (274) cpu_start: Project name:     wifi_station[0m
+[0;32mI (280) cpu_start: App version:      v5.1.1-dirty[0m
+[0;32mI (285) cpu_start: Compile time:     Feb 10 2024 14:46:28[0m
+[0;32mI (291) cpu_start: ELF file SHA256:  1ff949326dada1b4...[0m
+[0;32mI (297) cpu_start: ESP-IDF:          v5.1-rc2-dirty[0m
+[0;32mI (303) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (307) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (312) cpu_start: Chip rev:         v0.4[0m
+V (317) memory_layout: reserved range is 0x3c0b2e4c - 0x3c0b2e64[0m
+D (323) memory_layout: Checking 4 reserved memory ranges:[0m
+D (329) memory_layout: Reserved memory range 0x3fc80000 - 0x3fc90600[0m
+D (335) memory_layout: Reserved memory range 0x3fc90600 - 0x3fc96ff0[0m
+D (341) memory_layout: Reserved memory range 0x3fcdf060 - 0x3fce0000[0m
+D (348) memory_layout: Reserved memory range 0x50000000 - 0x50000020[0m
+D (354) memory_layout: Building list of available memory regions:[0m
+V (360) memory_layout: Examining memory region 0x3fc80000 - 0x3fca0000[0m
+V (367) memory_layout: Start of region 0x3fc80000 - 0x3fca0000 overlaps reserved 0x3fc80000 - 0x3fc90600[0m
+V (377) memory_layout: Start of region 0x3fc90600 - 0x3fca0000 overlaps reserved 0x3fc90600 - 0x3fc96ff0[0m
+D (386) memory_layout: Available memory region 0x3fc96ff0 - 0x3fca0000[0m
+V (393) memory_layout: Examining memory region 0x3fca0000 - 0x3fcc0000[0m
+D (399) memory_layout: Available memory region 0x3fca0000 - 0x3fcc0000[0m
+V (406) memory_layout: Examining memory region 0x3fcc0000 - 0x3fcdc710[0m
+D (412) memory_layout: Available memory region 0x3fcc0000 - 0x3fcdc710[0m
+V (419) memory_layout: Examining memory region 0x3fcdc710 - 0x3fce0000[0m
+V (426) memory_layout: End of region 0x3fcdc710 - 0x3fce0000 overlaps reserved 0x3fcdf060 - 0x3fce0000[0m
+D (435) memory_layout: Available memory region 0x3fcdc710 - 0x3fcdf060[0m
+V (442) memory_layout: Examining memory region 0x50000000 - 0x50002000[0m
+V (448) memory_layout: Start of region 0x50000000 - 0x50002000 overlaps reserved 0x50000000 - 0x50000020[0m
+D (458) memory_layout: Available memory region 0x50000020 - 0x50002000[0m
+[0;32mI (464) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (472) heap_init: New heap initialised at 0x3fc96ff0[0m
+[0;32mI (477) heap_init: At 3FC96FF0 len 00045720 (277 KiB): DRAM[0m
+[0;32mI (483) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+D (490) heap_init: New heap initialised at 0x50000020[0m
+[0;32mI (495) heap_init: At 50000020 len 00001FE0 (7 KiB): RTCRAM[0m
+V (501) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (507) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (516) intr_alloc: Connected src 27 to int 2 (cpu 0)[0m
+V (521) memspi: raw_chip_id: 164020
+[0m
+V (524) memspi: chip_id: 204016
+[0m
+V (528) memspi: raw_chip_id: 164020
+[0m
+V (531) memspi: chip_id: 204016
+[0m
+D (535) spi_flash: trying chip: issi[0m
+D (538) spi_flash: trying chip: gd[0m
+D (542) spi_flash: trying chip: mxic[0m
+D (546) spi_flash: trying chip: winbond[0m
+D (550) spi_flash: trying chip: boya[0m
+D (553) spi_flash: trying chip: th[0m
+D (557) spi_flash: trying chip: generic[0m
+[0;32mI (561) spi_flash: detected chip: generic[0m
+[0;32mI (565) spi_flash: flash io: dio[0m
+[0;33mW (569) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (582) cpu_start: calling init function: 0x42076b6e[0m
+D (587) cpu_start: calling init function: 0x42076ac6[0m
+D (592) cpu_start: calling init function: 0x420768d6[0m
+D (598) cpu_start: calling init function: 0x42076414[0m
+D (603) cpu_start: calling init function: 0x42044b18[0m
+D (608) efuse: In EFUSE_BLK2__DATA4_REG is used 2 bits starting with 0 bit[0m
+D (614) efuse: In EFUSE_BLK2__DATA5_REG is used 10 bits starting with 18 bit[0m
+V (621) adc_share_hw_ctrl: Calib(V1) ADC2 atten=3: 06C4[0m
+D (627) cpu_start: calling init function: 0x4201441e[0m
+D (632) cpu_start: calling init function: 0x4200002a[0m
+D (637) cpu_start: calling init function: 0x42005bf8 on core: 0[0m
+V (643) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (649) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xC02[0m
+D (657) intr_alloc: Connected src 39 to int 3 (cpu 0)[0m
+D (662) cpu_start: calling init function: 0x420035b4 on core: 0[0m
+[0;32mI (669) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (675) sleep: Enable automatic switching of GPIO sleep configuration[0m
+D (682) cpu_start: calling init function: 0x420013ec on core: 0[0m
+V (689) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (695) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (703) intr_alloc: Connected src 50 to int 4 (cpu 0)[0m
+[0;32mI (708) app_start: Starting scheduler on CPU0[0m
+V (713) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (713) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x402[0m
+D (713) intr_alloc: Connected src 37 to int 7 (cpu 0)[0m
+[0;32mI (713) main_task: Started on CPU0[0m
+D (713) heap_init: New heap initialised at 0x3fcdc710[0m
+V (713) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (723) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xE[0m
+D (733) intr_alloc: Connected src 33 to int 9 (cpu 0)[0m
+[0;32mI (733) main_task: Calling app_main()[0m
+V (743) partition: Loading the partition table[0m
+V (743) mmap: actual_mapped_len is 0x10000[0m
+V (753) calculated md5: 0x3fc9a058   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (763) stored md5: 0x3c0c8070   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (773) partition: Partition table MD5 verified[0m
+[0;32mI (783) wifi station: ESP_WIFI_MODE_STA[0m
+D (783) esp_netif_lwip: LwIP stack has been initialized[0m
+D (783) esp_netif_lwip: esp-netif has been successfully initialized[0m
+D (793) event: running task for loop 0x3fc9c51c[0m
+D (793) event: created task for loop 0x3fc9c51c[0m
+D (803) event: created event loop 0x3fc9c51c[0m
+D (803) esp_netif_objects: esp_netif_add_to_list 0x3fc9d444[0m
+D (813) esp_netif_objects: esp_netif_add_to_list netif added successfully (total netifs: 1)[0m
+D (813) esp_netif_lwip: check: remote, if=0x0 fn=0x42010a50
+[0m
+D (823) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+[0;32mI (833) pp: pp rom version: 9387209[0m
+[0;32mI (833) net80211: net80211 rom version: 9387209[0m
+D (843) nvs: nvs_open_from_partition misc 1[0m
+I (853) wifi:wifi driver task: 3fc9fe40, prio:23, stack:6656, core=0
+V (853) esp_adapter: thread sem create: sem=0x3fc9ff98[0m
+V (853) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (863) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (863) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (873) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (883) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (883) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (893) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (903) nvs: nvs_open_from_partition nvs.net80211 1[0m
+D (903) nvs: nvs_get opmode 1[0m
+D (913) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (913) nvs: nvs_get sta.authmode 1[0m
+D (913) nvs: nvs_get_str_or_blob sta.pswd[0m
+D (923) nvs: nvs_get_str_or_blob sta.pmk[0m
+D (923) nvs: nvs_get sta.chan 1[0m
+D (923) nvs: nvs_get auto.conn 1[0m
+D (933) nvs: nvs_get bssid.set 1[0m
+D (933) nvs: nvs_get_str_or_blob sta.bssid[0m
+D (933) nvs: nvs_get sta.lis_intval 2[0m
+D (943) nvs: nvs_get sta.phym 1[0m
+D (943) nvs: nvs_get sta.phybw 1[0m
+D (953) nvs: nvs_get_str_or_blob sta.apsw[0m
+D (953) nvs: nvs_get_str_or_blob sta.apinfo[0m
+D (953) nvs: nvs_get sta.scan_method 1[0m
+D (963) nvs: nvs_get sta.sort_method 1[0m
+D (963) nvs: nvs_get sta.minrssi 1[0m
+D (963) nvs: nvs_get sta.minauth 1[0m
+D (973) nvs: nvs_get sta.pmf_e 1[0m
+D (973) nvs: nvs_get sta.pmf_r 1[0m
+D (973) nvs: nvs_get sta.btm_e 1[0m
+D (983) nvs: nvs_get sta.rrm_e 1[0m
+D (983) nvs: nvs_get sta.mbo_e 1[0m
+D (983) nvs: nvs_get_str_or_blob ap.ssid[0m
+D (993) nvs: nvs_get_str_or_blob ap.passwd[0m
+D (993) nvs: nvs_get_str_or_blob ap.pmk[0m
+D (1003) nvs: nvs_get ap.chan 1[0m
+D (1003) nvs: nvs_get ap.authmode 1[0m
+D (1003) nvs: nvs_get ap.hidden 1[0m
+D (1013) nvs: nvs_get ap.max.conn 1[0m
+D (1013) nvs: nvs_get bcn.interval 2[0m
+D (1013) nvs: nvs_get ap.phym 1[0m
+D (1023) nvs: nvs_get ap.phybw 1[0m
+D (1023) nvs: nvs_get ap.sndchan 1[0m
+D (1023) nvs: nvs_get ap.pmf_e 1[0m
+D (1033) nvs: nvs_get ap.pmf_r 1[0m
+D (1033) nvs: nvs_get ap.p_cipher 1[0m
+D (1033) nvs: nvs_get lorate 1[0m
+D (1043) nvs: nvs_get_str_or_blob country[0m
+D (1043) nvs: nvs_get ap.ftm_r 1[0m
+D (1043) nvs: nvs_get sta.ft 1[0m
+D (1053) nvs: nvs_get sta.owe 1[0m
+D (1053) nvs: nvs_get sta.trans_d 1[0m
+D (1053) nvs: nvs_get sta.sae_h2e 1[0m
+D (1063) nvs: nvs_get sta.sae_pk_mode 1[0m
+D (1063) nvs: nvs_get sta.bss_retry 1[0m
+D (1073) nvs: nvs_get_str_or_blob sta.owe_data[0m
+D (1073) nvs: nvs_get sta.he_dcm 1[0m
+D (1073) nvs: nvs_get sta.he_dcm_c_tx 1[0m
+D (1083) nvs: nvs_get sta.he_dcm_c_rx 1[0m
+D (1083) nvs: nvs_get sta.he_mcs9_d 1[0m
+D (1093) nvs: nvs_get sta.he_su_b_d 1[0m
+D (1093) nvs: nvs_get sta.he_su_b_f_d 1[0m
+D (1093) nvs: nvs_get sta.he_mu_b_f_d 1[0m
+D (1103) nvs: nvs_get sta.he_cqi_f_d 1[0m
+D (1103) nvs: nvs_get_str_or_blob sta.sae_h2e_id[0m
+D (1113) nvs: nvs_get ap.sae_h2e 1[0m
+D (1113) nvs: nvs_get_str_or_blob ap.pmk_info[0m
+D (1113) nvs: nvs_get nan.phym 1[0m
+D (1123) nvs: nvs_set ap.sndchan 1 1[0m
+I (1123) wifi:wifi firmware version: b2f1f86
+I (1123) wifi:wifi certification version: v7.0
+I (1133) wifi:config NVS flash: enabled
+I (1133) wifi:config nano formating: disabled
+I (1143) wifi:Init data frame dynamic rx buffer num: 32
+I (1143) wifi:Init management frame dynamic rx buffer num: 32
+I (1153) wifi:Init management short buffer num: 32
+I (1153) wifi:Init dynamic tx buffer num: 32
+I (1153) wifi:Init static tx FG buffer num: 2
+I (1163) wifi:Init static rx buffer size: 1600
+I (1163) wifi:Init static rx buffer num: 10
+I (1173) wifi:Init dynamic rx buffer num: 32
+V (1173) wifi:hint=255, act_dur=<0,120>, pas_dur=360, nchans=14 history_num=0
+V (1183) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+[0;32mI (1183) wifi_init: rx ba win: 6[0m
+[0;32mI (1193) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1193) wifi_init: udp mbox: 6[0m
+[0;32mI (1193) wifi_init: tcp mbox: 6[0m
+[0;32mI (1203) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1203) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1213) wifi_init: tcp mss: 1440[0m
+[0;32mI (1213) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1223) wifi_init: WiFi RX IRAM OP enabled[0m
+V (1223) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (1233) nvs: nvs_get opmode 1[0m
+V (1233) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (1233) wifi:clear blacklist
+D (1243) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (1243) nvs: nvs_get sta.pmf_e 1[0m
+V (1243) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+[0;32mI (1253) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+D (1263) phy_init: loading PHY init data from application binary[0m
+D (1263) nvs: nvs_open_from_partition phy 0[0m
+D (1273) nvs: nvs_get cal_version 4[0m
+V (1273) phy_init: phy_get_rf_cal_version: 970
+[0m
+D (1273) nvs: nvs_get_str_or_blob cal_mac[0m
+D (1283) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1293) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1293) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (1303) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (1313) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (1313) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (1323) nvs: nvs_get_str_or_blob cal_data[0m
+D (1333) nvs: nvs_close 3[0m
+D (1333) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1333) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1343) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (1353) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (1363) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (1363) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+V (1413) wifi:ht20 freq=2412, chan=1
+D (1413) wifi:filter: set rx policy=0
+I (1413) wifi:mode : sta (c0:4e:30:a6:14:80)
+I (1413) wifi:enable tsf
+D (1413) wifi:filter: set rx policy=1
+D (1413) wifi:connect status 0 -> 0
+D (1423) event: running post WIFI_EVENT:2 with handler 0x42014860 and context 0x3fc9d698 on loop 0x3fc9c51c[0m
+D (1423) wifi_init_default: wifi_start esp-netif:0x3fc9d444 event-id2[0m
+D (1433) wifi_init_default: WIFI mac address: c0 4e 30 a6 14 80[0m
+V (1443) esp_adapter: thread sem create: sem=0x3fca5c38[0m
+V (1443) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (1453) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42010a70
+[0m
+D (1453) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (1463) esp_netif_handlers: esp_netif action has started with netif0x3fc9d444 from event_id=2[0m
+D (1473) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x420114e4
+[0m
+D (1483) esp_netif_lwip: esp_netif_start_api 0x3fc9d444[0m
+D (1483) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3fc9d444[0m
+D (1493) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (1493) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (1503) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+D (1513) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (1513) event: running post WIFI_EVENT:2 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (1523) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (1533) wifi:Start wifi connect
+D (1533) wifi:connect status 0 -> 0
+D (1533) wifi:connect chan=0
+V (1543) wifi:nvs=0, ssid=FIZZ32119, channel=6
+V (1543) wifi:ssid=FIZZ32119 match nvs 0, channel=6
+D (1543) wifi:first chan=6
+D (1553) wifi:connect status 0 -> 1
+D (1553) wifi:filter: set rx policy=3
+D (1553) wifi:clear scan ap list
+D (1563) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=1584311, index=0
+V (1573) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (1573) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (1583) wifi:change: chan<6,0>, dur<0,120>
+V (1583) wifi:ht20 freq=2437, chan=6
+V (1583) wifi:enter start op, arg=0x3fc94728
+V (1593) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (1593) wifi:scan specific ssid=FIZZ32119
+V (1603) wifi:start max timer
+[0;32mI (1603) wifi station: wifi_init_sta finished.[0m
+D (1653) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (1653) wifi:updated connection retries to 0
+D (1653) wifi:profile match: ss_state=0x7
+V (1653) wifi:scan histroy table is not full yet, add
+V (1663) wifi:add ssid=FIZZ32119, chan=6 to scan history
+D (1663) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (1673) wifi:find first mathched ssid, scan done
+V (1673) wifi:back home chan=<1,0>, current chan=<6,0>
+V (1683) wifi:ht20 freq=2412, chan=1
+D (1683) wifi:filter: set rx policy=4
+D (1683) wifi:first chan=1
+V (1693) wifi:scan_done: arg=0x0, status=0, cur_time=1713443, scan_id=128, scan state=0
+V (1693) wifi:call scan_done cb, arg=0x0
+D (1703) wifi:handoff_cb: status=0
+V (1703) wifi:best bss has set.
+D (1703) wifi:ap found, mac=34:98:b5:09:bd:d2
+V (1713) wifi:bssid=34:98:b5:09:bd:d2, LR=0
+D (1713) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=1
+D (1723) wifi:filter: set rx policy=5
+I (1723) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+V (1733) wifi:ht20 freq=2437, chan=6
+D (1733) wifi:connect_op: status=0, auth=5, cipher=3 
+D (1743) wifi:auth mode is not none
+D (1743) wifi:connect_bss: auth=1, reconnect=0
+I (1743) wifi:state: init -> auth (b0)
+D (1753) wifi:start 1s AUTH timer
+D (1753) wifi:clear scan ap list
+D (2753) wifi:auth timeout
+I (2753) wifi:state: auth -> init (200)
+D (2753) wifi:connect status 1 -> 4
+D (2753) wifi:stop beacon/connect timer
+D (2753) wifi:reason: auth expire(2)
+D (2753) wifi:add bssid 34:98:b5:09:bd:d2 to blacklist, cnt=0
+D (2763) wifi:stop CSA timer
+V (2763) wifi:bss connection retry cnt=0
+D (2773) wifi:remove 34:98:b5:09:bd:d2 from rc list
+I (2773) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (2783) wifi:filter: set rx policy=8
+D (2783) wifi:Send disconnect event, reason=2, AP number=0
+D (2793) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (2793) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (2803) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (2813) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (2823) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (2823) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (2833) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (2843) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (2853) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (2853) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (2863) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (2863) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (2873) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (2883) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (2883) wifi:Start wifi connect
+D (2893) wifi:connect status 4 -> 0
+D (2893) wifi:connect chan=0
+V (2893) wifi:history=0, ssid=FIZZ32119, channel=6
+V (2903) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (2903) wifi:first chan=6
+D (2913) wifi:connect status 0 -> 1
+D (2913) wifi:filter: set rx policy=3
+D (2913) wifi:clear scan ap list
+D (2913) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=2942540, index=0
+V (2923) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (2933) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (2943) wifi:change: chan<6,0>, dur<0,120>
+V (2943) wifi:enter start op, arg=0x3fc94728
+V (2943) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (2953) wifi:scan specific ssid=FIZZ32119
+V (2953) wifi:start max timer
+D (2963) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (2963) wifi:updated connection retries to 0
+D (2973) wifi:profile match: ss_state=0x7
+V (2973) wifi:update scan history ssid=FIZZ32119, channel=6
+[0;32mI (2973) wifi station: retry to connect to the AP[0m
+[0;32mI (2983) wifi station: connect to the AP fail[0m
+D (2983) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (2993) wifi:find first mathched ssid, scan done
+V (2993) wifi:back home chan=<6,0>, current chan=<6,0>
+D (3003) wifi:filter: set rx policy=4
+D (3003) wifi:first chan=1
+V (3003) wifi:scan_done: arg=0x0, status=0, cur_time=3032453, scan_id=128, scan state=0
+V (3013) wifi:call scan_done cb, arg=0x0
+D (3023) wifi:handoff_cb: status=0
+V (3023) wifi:best bss has set.
+D (3023) wifi:ap found, mac=bc:3e:07:25:41:48
+V (3033) wifi:bssid=bc:3e:07:25:41:48, LR=0
+D (3033) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (3043) wifi:filter: set rx policy=5
+I (3043) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (3053) wifi:connect_op: status=0, auth=5, cipher=3 
+D (3053) wifi:auth mode is not none
+D (3053) wifi:connect_bss: auth=1, reconnect=0
+I (3063) wifi:state: init -> auth (b0)
+D (3063) wifi:start 1s AUTH timer
+D (3063) wifi:clear scan ap list
+D (4063) wifi:auth timeout
+I (4063) wifi:state: auth -> init (200)
+D (4073) wifi:connect status 1 -> 4
+D (4073) wifi:stop beacon/connect timer
+D (4073) wifi:reason: auth expire(2)
+D (4073) wifi:add bssid bc:3e:07:25:41:48 to blacklist, cnt=1
+D (4083) wifi:stop CSA timer
+V (4083) wifi:bss connection retry cnt=0
+D (4083) wifi:remove bc:3e:07:25:41:48 from rc list
+I (4093) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (4093) wifi:filter: set rx policy=8
+D (4103) wifi:Send disconnect event, reason=2, AP number=0
+D (4103) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (4113) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (4123) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (4133) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (4133) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (4143) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (4153) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (4163) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (4163) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (4173) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (4173) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (4183) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (4193) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (4203) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (4203) wifi:Start wifi connect
+D (4203) wifi:connect status 4 -> 0
+D (4213) wifi:connect chan=0
+V (4213) wifi:history=0, ssid=FIZZ32119, channel=6
+V (4213) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (4223) wifi:first chan=6
+D (4223) wifi:connect status 0 -> 1
+D (4223) wifi:filter: set rx policy=3
+D (4233) wifi:clear scan ap list
+D (4233) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=4258258, index=0
+V (4243) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (4253) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (4253) wifi:change: chan<6,0>, dur<0,120>
+V (4253) wifi:enter start op, arg=0x3fc94728
+V (4263) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (4273) wifi:scan specific ssid=FIZZ32119
+V (4273) wifi:start max timer
+[0;32mI (4273) wifi station: retry to connect to the AP[0m
+[0;32mI (4283) wifi station: connect to the AP fail[0m
+D (4313) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (4313) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (4333) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (4333) wifi:updated connection retries to 0
+D (4333) wifi:profile match: ss_state=0x7
+V (4333) wifi:update scan history ssid=FIZZ32119, channel=6
+D (4343) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (4343) wifi:find first mathched ssid, scan done
+V (4353) wifi:back home chan=<6,0>, current chan=<6,0>
+D (4353) wifi:filter: set rx policy=4
+D (4353) wifi:first chan=1
+V (4363) wifi:scan_done: arg=0x0, status=0, cur_time=4384631, scan_id=128, scan state=0
+V (4363) wifi:call scan_done cb, arg=0x0
+D (4373) wifi:handoff_cb: status=0
+V (4373) wifi:best bss has set.
+D (4373) wifi:ap found, mac=34:98:b5:09:c9:bd
+V (4383) wifi:bssid=34:98:b5:09:c9:bd, LR=0
+D (4383) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (4393) wifi:filter: set rx policy=5
+I (4393) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (4403) wifi:connect_op: status=0, auth=5, cipher=3 
+D (4403) wifi:auth mode is not none
+D (4413) wifi:connect_bss: auth=1, reconnect=0
+I (4413) wifi:state: init -> auth (b0)
+D (4413) wifi:start 1s AUTH timer
+D (4423) wifi:clear scan ap list
+D (5423) wifi:auth timeout
+I (5423) wifi:state: auth -> init (200)
+D (5423) wifi:connect status 1 -> 4
+D (5423) wifi:stop beacon/connect timer
+D (5423) wifi:reason: auth expire(2)
+D (5423) wifi:add bssid 34:98:b5:09:c9:bd to blacklist, cnt=2
+D (5433) wifi:stop CSA timer
+V (5433) wifi:bss connection retry cnt=0
+D (5433) wifi:remove 34:98:b5:09:c9:bd from rc list
+I (5443) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (5443) wifi:filter: set rx policy=8
+D (5453) wifi:Send disconnect event, reason=2, AP number=0
+D (5453) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (5463) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (5473) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (5483) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (5483) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (5493) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (5503) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (5513) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (5513) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (5523) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (5533) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (5533) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (5543) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (5553) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (5553) wifi:Start wifi connect
+D (5563) wifi:connect status 4 -> 0
+D (5563) wifi:connect chan=0
+V (5563) wifi:history=0, ssid=FIZZ32119, channel=6
+V (5573) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (5573) wifi:first chan=6
+D (5573) wifi:connect status 0 -> 1
+D (5583) wifi:filter: set rx policy=3
+D (5583) wifi:clear scan ap list
+D (5583) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=5610418, index=0
+V (5593) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (5603) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (5603) wifi:change: chan<6,0>, dur<0,120>
+V (5613) wifi:enter start op, arg=0x3fc94728
+V (5613) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (5623) wifi:scan specific ssid=FIZZ32119
+V (5623) wifi:start max timer
+D (5623) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (5633) wifi:find the bc:3e:07:25:41:48 in blacklist.
+
+[0;32mI (5633) wifi station: retry to connect to the AP[0m
+[0;32mI (5643) wifi station: connect to the AP fail[0m
+D (5643) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (5653) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (5663) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (5673) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+D (5743) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5743) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (5743) wifi:change: chan<1,0>, dur<0,120>
+V (5753) wifi:ht20 freq=2412, chan=1
+V (5753) wifi:enter start op, arg=0x3fc94728
+V (5763) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (5763) wifi:scan specific ssid=FIZZ32119
+V (5773) wifi:start max timer
+D (5893) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5893) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (5893) wifi:change: chan<2,0>, dur<0,120>
+V (5893) wifi:ht20 freq=2417, chan=2
+V (5903) wifi:enter start op, arg=0x3fc94728
+V (5903) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (5913) wifi:scan specific ssid=FIZZ32119
+V (5913) wifi:start max timer
+D (6033) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6033) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (6033) wifi:change: chan<3,0>, dur<0,120>
+V (6043) wifi:ht20 freq=2422, chan=3
+V (6043) wifi:enter start op, arg=0x3fc94728
+V (6043) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (6053) wifi:scan specific ssid=FIZZ32119
+V (6053) wifi:start max timer
+D (6183) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6183) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (6183) wifi:change: chan<4,0>, dur<0,120>
+V (6183) wifi:ht20 freq=2427, chan=4
+V (6183) wifi:enter start op, arg=0x3fc94728
+V (6193) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (6203) wifi:scan specific ssid=FIZZ32119
+V (6203) wifi:start max timer
+D (6323) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6323) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (6323) wifi:change: chan<5,0>, dur<0,120>
+V (6333) wifi:ht20 freq=2432, chan=5
+V (6333) wifi:enter start op, arg=0x3fc94728
+V (6333) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (6343) wifi:scan specific ssid=FIZZ32119
+V (6343) wifi:start max timer
+D (6473) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6473) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (6473) wifi:change: chan<7,0>, dur<0,120>
+V (6473) wifi:ht20 freq=2442, chan=7
+V (6473) wifi:enter start op, arg=0x3fc94728
+V (6483) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (6483) wifi:scan specific ssid=FIZZ32119
+V (6493) wifi:start max timer
+D (6613) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6613) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (6613) wifi:change: chan<8,0>, dur<0,120>
+V (6613) wifi:ht20 freq=2447, chan=8
+V (6623) wifi:enter start op, arg=0x3fc94728
+V (6623) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (6633) wifi:scan specific ssid=FIZZ32119
+V (6633) wifi:start max timer
+D (6753) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6763) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (6763) wifi:change: chan<9,0>, dur<0,120>
+V (6763) wifi:ht20 freq=2452, chan=9
+V (6763) wifi:enter start op, arg=0x3fc94728
+V (6773) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (6773) wifi:scan specific ssid=FIZZ32119
+V (6783) wifi:start max timer
+D (6903) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6903) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (6903) wifi:change: chan<10,0>, dur<0,120>
+V (6903) wifi:ht20 freq=2457, chan=10
+V (6913) wifi:enter start op, arg=0x3fc94728
+V (6913) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (6923) wifi:scan specific ssid=FIZZ32119
+V (6923) wifi:start max timer
+D (7043) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7043) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (7043) wifi:change: chan<11,0>, dur<0,120>
+V (7053) wifi:ht20 freq=2462, chan=11
+V (7053) wifi:enter start op, arg=0x3fc94728
+V (7053) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (7063) wifi:scan specific ssid=FIZZ32119
+V (7073) wifi:start max timer
+D (7193) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7193) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (7193) wifi:change: chan<12,0>, dur<360,360>
+V (7193) wifi:ht20 freq=2467, chan=12
+V (7203) wifi:enter start op, arg=0x3fc94728
+V (7203) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (7213) wifi:passive scan, listen only
+V (7213) wifi:start max timer
+D (7573) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7573) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (7573) wifi:change: chan<13,0>, dur<360,360>
+V (7583) wifi:ht20 freq=2472, chan=13
+V (7583) wifi:enter start op, arg=0x3fc94728
+V (7583) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (7593) wifi:passive scan, listen only
+V (7603) wifi:start max timer
+D (7963) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7963) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (7963) wifi:change: chan<14,0>, dur<360,360>
+V (7963) wifi:ht20 freq=2484, chan=14
+V (7973) wifi:enter start op, arg=0x3fc94728
+V (7973) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (7983) wifi:passive scan, listen only
+V (7983) wifi:start max timer
+D (8343) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (8343) wifi:back home chan=<6,0>, current chan=<14,0>
+V (8343) wifi:ht20 freq=2437, chan=6
+D (8353) wifi:filter: set rx policy=4
+D (8353) wifi:first chan=1
+V (8353) wifi:scan_done: arg=0x0, status=0, cur_time=8378689, scan_id=128, scan state=0
+V (8363) wifi:call scan_done cb, arg=0x0
+D (8363) wifi:handoff_cb: status=0
+D (8373) wifi:clear rc list
+D (8373) wifi:clear blacklist
+D (8373) wifi:Send disconnect event, reason=205
+D (8373) wifi:connect status 1 -> 3
+D (8383) wifi:disable connect timer
+D (8383) wifi:clear scan ap list
+D (8383) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (8393) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (8403) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (8413) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (8423) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (8423) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (8433) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (8443) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (8453) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (8453) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (8463) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (8463) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (8473) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (8483) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (8483) wifi:Start wifi connect
+D (8493) wifi:connect status 3 -> 0
+D (8493) wifi:connect chan=0
+V (8493) wifi:history=0, ssid=FIZZ32119, channel=6
+V (8503) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (8503) wifi:first chan=6
+D (8503) wifi:connect status 0 -> 1
+D (8513) wifi:filter: set rx policy=3
+D (8513) wifi:clear scan ap list
+D (8513) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=8541612, index=0
+V (8523) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (8533) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (8533) wifi:change: chan<6,0>, dur<0,120>
+V (8543) wifi:enter start op, arg=0x3fc94728
+V (8543) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (8553) wifi:scan specific ssid=FIZZ32119
+V (8553) wifi:start max timer
+D (8563) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (8563) wifi:updated connection retries to 0
+D (8563) wifi:profile match: ss_state=0x7
+V (8573) wifi:update scan history ssid=FIZZ32119, channel=6
+[0;32mI (8573) wifi station: retry to connect to the AP[0m
+[0;32mI (8583) wifi station: connect to the AP fail[0m
+D (8583) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (8593) wifi:find first mathched ssid, scan done
+V (8593) wifi:back home chan=<6,0>, current chan=<6,0>
+D (8603) wifi:filter: set rx policy=4
+D (8603) wifi:first chan=1
+V (8603) wifi:scan_done: arg=0x0, status=0, cur_time=8631524, scan_id=128, scan state=0
+V (8613) wifi:call scan_done cb, arg=0x0
+D (8613) wifi:handoff_cb: status=0
+V (8623) wifi:best bss has set.
+D (8623) wifi:ap found, mac=34:98:b5:09:c9:bd
+V (8633) wifi:bssid=34:98:b5:09:c9:bd, LR=0
+D (8633) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (8643) wifi:filter: set rx policy=5
+I (8643) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (8643) wifi:connect_op: status=0, auth=5, cipher=3 
+D (8653) wifi:auth mode is not none
+D (8653) wifi:connect_bss: auth=1, reconnect=0
+I (8663) wifi:state: init -> auth (b0)
+D (8663) wifi:start 1s AUTH timer
+D (8663) wifi:clear scan ap list
+[0;32mI (839) net80211: net80211 rom version: 9387209[0m
+D (849) nvs: nvs_open_from_partition misc 1[0m
+I (859) wifi:wifi driver task: 3fc9fe40, prio:23, stack:6656, core=0
+V (859) esp_adapter: thread sem create: sem=0x3fc9ff98[0m
+V (859) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (869) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (869) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (879) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (889) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (889) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (899) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (909) nvs: nvs_open_from_partition nvs.net80211 1[0m
+D (909) nvs: nvs_get opmode 1[0m
+D (919) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (919) nvs: nvs_get sta.authmode 1[0m
+D (919) nvs: nvs_get_str_or_blob sta.pswd[0m
+D (929) nvs: nvs_get_str_or_blob sta.pmk[0m
+D (929) nvs: nvs_get sta.chan 1[0m
+D (929) nvs: nvs_get auto.conn 1[0m
+D (939) nvs: nvs_get bssid.set 1[0m
+D (939) nvs: nvs_get_str_or_blob sta.bssid[0m
+D (939) nvs: nvs_get sta.lis_intval 2[0m
+D (949) nvs: nvs_get sta.phym 1[0m
+D (949) nvs: nvs_get sta.phybw 1[0m
+D (959) nvs: nvs_get_str_or_blob sta.apsw[0m
+D (959) nvs: nvs_get_str_or_blob sta.apinfo[0m
+D (959) nvs: nvs_get sta.scan_method 1[0m
+D (969) nvs: nvs_get sta.sort_method 1[0m
+D (969) nvs: nvs_get sta.minrssi 1[0m
+D (969) nvs: nvs_get sta.minauth 1[0m
+D (979) nvs: nvs_get sta.pmf_e 1[0m
+D (979) nvs: nvs_get sta.pmf_r 1[0m
+D (979) nvs: nvs_get sta.btm_e 1[0m
+D (989) nvs: nvs_get sta.rrm_e 1[0m
+D (989) nvs: nvs_get sta.mbo_e 1[0m
+D (989) nvs: nvs_get_str_or_blob ap.ssid[0m
+D (999) nvs: nvs_get_str_or_blob ap.passwd[0m
+D (999) nvs: nvs_get_str_or_blob ap.pmk[0m
+D (1009) nvs: nvs_get ap.chan 1[0m
+D (1009) nvs: nvs_get ap.authmode 1[0m
+D (1009) nvs: nvs_get ap.hidden 1[0m
+D (1019) nvs: nvs_get ap.max.conn 1[0m
+D (1019) nvs: nvs_get bcn.interval 2[0m
+D (1019) nvs: nvs_get ap.phym 1[0m
+D (1029) nvs: nvs_get ap.phybw 1[0m
+D (1029) nvs: nvs_get ap.sndchan 1[0m
+D (1029) nvs: nvs_get ap.pmf_e 1[0m
+D (1039) nvs: nvs_get ap.pmf_r 1[0m
+D (1039) nvs: nvs_get ap.p_cipher 1[0m
+D (1039) nvs: nvs_get lorate 1[0m
+D (1049) nvs: nvs_get_str_or_blob country[0m
+D (1049) nvs: nvs_get ap.ftm_r 1[0m
+D (1049) nvs: nvs_get sta.ft 1[0m
+D (1059) nvs: nvs_get sta.owe 1[0m
+D (1059) nvs: nvs_get sta.trans_d 1[0m
+D (1059) nvs: nvs_get sta.sae_h2e 1[0m
+D (1069) nvs: nvs_get sta.sae_pk_mode 1[0m
+D (1069) nvs: nvs_get sta.bss_retry 1[0m
+D (1079) nvs: nvs_get_str_or_blob sta.owe_data[0m
+D (1079) nvs: nvs_get sta.he_dcm 1[0m
+D (1079) nvs: nvs_get sta.he_dcm_c_tx 1[0m
+D (1089) nvs: nvs_get sta.he_dcm_c_rx 1[0m
+D (1089) nvs: nvs_get sta.he_mcs9_d 1[0m
+D (1099) nvs: nvs_get sta.he_su_b_d 1[0m
+D (1099) nvs: nvs_get sta.he_su_b_f_d 1[0m
+D (1099) nvs: nvs_get sta.he_mu_b_f_d 1[0m
+D (1109) nvs: nvs_get sta.he_cqi_f_d 1[0m
+D (1109) nvs: nvs_get_str_or_blob sta.sae_h2e_id[0m
+D (1119) nvs: nvs_get ap.sae_h2e 1[0m
+D (1119) nvs: nvs_get_str_or_blob ap.pmk_info[0m
+D (1119) nvs: nvs_get nan.phym 1[0m
+D (1129) nvs: nvs_set ap.sndchan 1 1[0m
+I (1129) wifi:wifi firmware version: b2f1f86
+I (1129) wifi:wifi certification version: v7.0
+I (1139) wifi:config NVS flash: enabled
+I (1139) wifi:config nano formating: disabled
+I (1149) wifi:Init data frame dynamic rx buffer num: 32
+I (1149) wifi:Init management frame dynamic rx buffer num: 32
+I (1159) wifi:Init management short buffer num: 32
+I (1159) wifi:Init dynamic tx buffer num: 32
+I (1159) wifi:Init static tx FG buffer num: 2
+I (1169) wifi:Init static rx buffer size: 1600
+I (1169) wifi:Init static rx buffer num: 10
+I (1179) wifi:Init dynamic rx buffer num: 32
+V (1179) wifi:hint=255, act_dur=<0,120>, pas_dur=360, nchans=14 history_num=0
+V (1189) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+[0;32mI (1189) wifi_init: rx ba win: 6[0m
+[0;32mI (1199) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1199) wifi_init: udp mbox: 6[0m
+[0;32mI (1199) wifi_init: tcp mbox: 6[0m
+[0;32mI (1209) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1209) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1219) wifi_init: tcp mss: 1440[0m
+[0;32mI (1219) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1229) wifi_init: WiFi RX IRAM OP enabled[0m
+V (1229) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (1239) nvs: nvs_get opmode 1[0m
+V (1239) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (1239) wifi:clear blacklist
+D (1249) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (1249) nvs: nvs_get sta.pmf_e 1[0m
+V (1249) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+[0;32mI (1259) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+D (1269) phy_init: loading PHY init data from application binary[0m
+D (1269) nvs: nvs_open_from_partition phy 0[0m
+D (1279) nvs: nvs_get cal_version 4[0m
+V (1279) phy_init: phy_get_rf_cal_version: 970
+[0m
+D (1279) nvs: nvs_get_str_or_blob cal_mac[0m
+D (1289) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1299) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1299) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (1309) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (1319) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (1319) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (1329) nvs: nvs_get_str_or_blob cal_data[0m
+D (1339) nvs: nvs_close 3[0m
+D (1339) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1339) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1349) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (1359) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (1369) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (1369) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+V (1419) wifi:ht20 freq=2412, chan=1
+D (1419) wifi:filter: set rx policy=0
+I (1419) wifi:mode : sta (c0:4e:30:a6:14:80)
+I (1419) wifi:enable tsf
+D (1419) wifi:filter: set rx policy=1
+D (1429) wifi:connect status 0 -> 0
+D (1429) event: running post WIFI_EVENT:2 with handler 0x42014860 and context 0x3fc9d698 on loop 0x3fc9c51c[0m
+D (1439) wifi_init_default: wifi_start esp-netif:0x3fc9d444 event-id2[0m
+D (1449) wifi_init_default: WIFI mac address: c0 4e 30 a6 14 80[0m
+V (1449) esp_adapter: thread sem create: sem=0x3fca5c38[0m
+V (1459) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (1459) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42010a70
+[0m
+D (1469) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (1469) esp_netif_handlers: esp_netif action has started with netif0x3fc9d444 from event_id=2[0m
+D (1479) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x420114e4
+[0m
+D (1489) esp_netif_lwip: esp_netif_start_api 0x3fc9d444[0m
+D (1489) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3fc9d444[0m
+D (1499) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (1509) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (1509) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+D (1519) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (1529) event: running post WIFI_EVENT:2 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (1539) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (1539) wifi:Start wifi connect
+D (1539) wifi:connect status 0 -> 0
+D (1549) wifi:connect chan=0
+V (1549) wifi:nvs=0, ssid=FIZZ32119, channel=6
+V (1549) wifi:ssid=FIZZ32119 match nvs 0, channel=6
+D (1559) wifi:first chan=6
+D (1559) wifi:connect status 0 -> 1
+D (1559) wifi:filter: set rx policy=3
+D (1569) wifi:clear scan ap list
+D (1569) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=1594116, index=0
+V (1579) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (1589) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (1589) wifi:change: chan<6,0>, dur<0,120>
+V (1589) wifi:ht20 freq=2437, chan=6
+V (1599) wifi:enter start op, arg=0x3fc94728
+V (1599) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (1609) wifi:scan specific ssid=FIZZ32119
+V (1609) wifi:start max timer
+D (1619) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (1619) wifi:updated connection retries to 0
+D (1619) wifi:profile match: ss_state=0x7
+V (1629) wifi:scan histroy table is not full yet, add
+V (1629) wifi:add ssid=FIZZ32119, chan=6 to scan history
+D (1639) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (1639) wifi:find first mathched ssid, scan done
+V (1649) wifi:back home chan=<1,0>, current chan=<6,0>
+V (1649) wifi:ht20 freq=2412, chan=1
+D (1659) wifi:filter: set rx policy=4
+D (1659) wifi:first chan=1
+V (1659) wifi:scan_done: arg=0x0, status=0, cur_time=1684724, scan_id=128, scan state=0
+V (1669) wifi:call scan_done cb, arg=0x0
+D (1669) wifi:handoff_cb: status=0
+V (1679) wifi:best bss has set.
+D (1679) wifi:ap found, mac=bc:3e:07:25:41:48
+V (1679) wifi:bssid=bc:3e:07:25:41:48, LR=0
+D (1689) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=1
+D (1689) wifi:filter: set rx policy=5
+I (1699) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+V (1699) wifi:ht20 freq=2437, chan=6
+D (1709) wifi:connect_op: status=0, auth=5, cipher=3 
+D (1709) wifi:auth mode is not none
+D (1709) wifi:connect_bss: auth=1, reconnect=0
+I (1719) wifi:state: init -> auth (b0)
+D (1719) wifi:start 1s AUTH timer
+D (1719) wifi:clear scan ap list
+[0;32mI (1729) wifi station: wifi_init_sta finished.[0m
+D (2719) wifi:auth timeout
+I (2719) wifi:state: auth -> init (200)
+D (2729) wifi:connect status 1 -> 4
+D (2729) wifi:stop beacon/connect timer
+D (2729) wifi:reason: auth expire(2)
+D (2729) wifi:add bssid bc:3e:07:25:41:48 to blacklist, cnt=0
+D (2739) wifi:stop CSA timer
+V (2739) wifi:bss connection retry cnt=0
+D (2739) wifi:remove bc:3e:07:25:41:48 from rc list
+I (2749) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (2749) wifi:filter: set rx policy=8
+D (2759) wifi:Send disconnect event, reason=2, AP number=0
+D (2759) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (2769) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (2779) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (2789) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (2789) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (2799) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (2809) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (2819) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (2819) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (2829) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (2829) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (2839) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (2849) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (2859) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (2859) wifi:Start wifi connect
+D (2859) wifi:connect status 4 -> 0
+D (2869) wifi:connect chan=0
+V (2869) wifi:history=0, ssid=FIZZ32119, channel=6
+V (2869) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (2879) wifi:first chan=6
+D (2879) wifi:connect status 0 -> 1
+D (2879) wifi:filter: set rx policy=3
+D (2889) wifi:clear scan ap list
+D (2889) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=2913860, index=0
+V (2899) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (2909) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (2909) wifi:change: chan<6,0>, dur<0,120>
+V (2909) wifi:enter start op, arg=0x3fc94728
+V (2919) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (2929) wifi:scan specific ssid=FIZZ32119
+V (2929) wifi:start max timer
+D (2929) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (2939) wifi:updated connection retries to 0
+D (2939) wifi:profile match: ss_state=0x7
+V (2939) wifi:update scan history ssid=FIZZ32119, channel=6
+[0;32mI (2949) wifi station: retry to connect to the AP[0m
+[0;32mI (2959) wifi station: connect to the AP fail[0m
+D (2959) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (2969) wifi:find first mathched ssid, scan done
+V (2969) wifi:back home chan=<6,0>, current chan=<6,0>
+D (2969) wifi:filter: set rx policy=4
+D (2979) wifi:first chan=1
+V (2979) wifi:scan_done: arg=0x0, status=0, cur_time=3003773, scan_id=128, scan state=0
+V (2989) wifi:call scan_done cb, arg=0x0
+D (2989) wifi:handoff_cb: status=0
+V (2989) wifi:best bss has set.
+D (2999) wifi:ap found, mac=34:98:b5:09:c9:bd
+V (2999) wifi:bssid=34:98:b5:09:c9:bd, LR=0
+D (3009) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (3009) wifi:filter: set rx policy=5
+I (3019) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (3019) wifi:connect_op: status=0, auth=5, cipher=3 
+D (3029) wifi:auth mode is not none
+D (3029) wifi:connect_bss: auth=1, reconnect=0
+I (3029) wifi:state: init -> auth (b0)
+D (3039) wifi:start 1s AUTH timer
+D (3039) wifi:clear scan ap list
+D (4039) wifi:auth timeout
+I (4039) wifi:state: auth -> init (200)
+D (4039) wifi:connect status 1 -> 4
+D (4039) wifi:stop beacon/connect timer
+D (4039) wifi:reason: auth expire(2)
+D (4049) wifi:add bssid 34:98:b5:09:c9:bd to blacklist, cnt=1
+D (4049) wifi:stop CSA timer
+V (4049) wifi:bss connection retry cnt=0
+D (4059) wifi:remove 34:98:b5:09:c9:bd from rc list
+I (4059) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (4069) wifi:filter: set rx policy=8
+D (4069) wifi:Send disconnect event, reason=2, AP number=0
+D (4079) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (4089) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (4099) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (4099) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (4109) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (4109) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (4119) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (4129) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (4139) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (4139) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (4149) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (4159) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (4159) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (4169) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (4179) wifi:Start wifi connect
+D (4179) wifi:connect status 4 -> 0
+D (4179) wifi:connect chan=0
+V (4179) wifi:history=0, ssid=FIZZ32119, channel=6
+V (4189) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (4189) wifi:first chan=6
+D (4199) wifi:connect status 0 -> 1
+D (4199) wifi:filter: set rx policy=3
+D (4199) wifi:clear scan ap list
+D (4209) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=4229583, index=0
+V (4219) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (4219) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (4229) wifi:change: chan<6,0>, dur<0,120>
+V (4229) wifi:enter start op, arg=0x3fc94728
+V (4229) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (4239) wifi:scan specific ssid=FIZZ32119
+V (4249) wifi:start max timer
+D (4249) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (4249) wifi:updated connection retries to 0
+D (4259) wifi:profile match: ss_state=0x7
+V (4259) wifi:update scan history ssid=FIZZ32119, channel=6
+D (4269) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (4269) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+[0;32mI (4279) wifi station: retry to connect to the AP[0m
+[0;32mI (4279) wifi station: connect to the AP fail[0m
+D (4279) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (4289) wifi:find the bc:3e:07:25:41:48 in blacklist.
+
+D (4299) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (4299) wifi:find first mathched ssid, scan done
+V (4299) wifi:back home chan=<6,0>, current chan=<6,0>
+D (4309) wifi:filter: set rx policy=4
+D (4309) wifi:first chan=1
+V (4319) wifi:scan_done: arg=0x0, status=0, cur_time=4338947, scan_id=128, scan state=0
+V (4319) wifi:call scan_done cb, arg=0x0
+D (4329) wifi:handoff_cb: status=0
+V (4329) wifi:best bss has set.
+D (4329) wifi:ap found, mac=34:98:b5:09:bd:d2
+V (4339) wifi:bssid=34:98:b5:09:bd:d2, LR=0
+D (4339) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (4349) wifi:filter: set rx policy=5
+I (4349) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (4359) wifi:connect_op: status=0, auth=5, cipher=3 
+D (4359) wifi:auth mode is not none
+D (4359) wifi:connect_bss: auth=1, reconnect=0
+I (4369) wifi:state: init -> auth (b0)
+D (4369) wifi:start 1s AUTH timer
+D (4379) wifi:clear scan ap list
+D (5379) wifi:auth timeout
+I (5379) wifi:state: auth -> init (200)
+D (5379) wifi:connect status 1 -> 4
+D (5379) wifi:stop beacon/connect timer
+D (5379) wifi:reason: auth expire(2)
+D (5379) wifi:add bssid 34:98:b5:09:bd:d2 to blacklist, cnt=2
+D (5389) wifi:stop CSA timer
+V (5389) wifi:bss connection retry cnt=0
+D (5389) wifi:remove 34:98:b5:09:bd:d2 from rc list
+I (5399) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (5399) wifi:filter: set rx policy=8
+D (5409) wifi:Send disconnect event, reason=2, AP number=0
+D (5409) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (5419) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (5429) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (5439) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (5439) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (5449) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (5459) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (5469) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (5469) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (5479) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (5479) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (5489) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (5499) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (5509) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (5509) wifi:Start wifi connect
+D (5509) wifi:connect status 4 -> 0
+D (5519) wifi:connect chan=0
+V (5519) wifi:history=0, ssid=FIZZ32119, channel=6
+V (5519) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (5529) wifi:first chan=6
+D (5529) wifi:connect status 0 -> 1
+D (5529) wifi:filter: set rx policy=3
+D (5539) wifi:clear scan ap list
+D (5539) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=5564744, index=0
+V (5549) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (5559) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (5559) wifi:change: chan<6,0>, dur<0,120>
+V (5569) wifi:enter start op, arg=0x3fc94728
+V (5569) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (5579) wifi:scan specific ssid=FIZZ32119
+V (5579) wifi:start max timer
+D (5579) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (5589) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (5589) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (5599) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+[0;32mI (5599) wifi station: retry to connect to the AP[0m
+[0;32mI (5609) wifi station: connect to the AP fail[0m
+D (5649) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (5649) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (5669) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (5669) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+D (5699) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5699) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (5699) wifi:change: chan<1,0>, dur<0,120>
+V (5709) wifi:ht20 freq=2412, chan=1
+V (5709) wifi:enter start op, arg=0x3fc94728
+V (5709) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (5719) wifi:scan specific ssid=FIZZ32119
+V (5719) wifi:start max timer
+D (5849) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5849) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (5849) wifi:change: chan<2,0>, dur<0,120>
+V (5849) wifi:ht20 freq=2417, chan=2
+V (5859) wifi:enter start op, arg=0x3fc94728
+V (5859) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (5859) wifi:scan specific ssid=FIZZ32119
+V (5869) wifi:start max timer
+D (5989) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5989) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (5989) wifi:change: chan<3,0>, dur<0,120>
+V (5999) wifi:ht20 freq=2422, chan=3
+V (5999) wifi:enter start op, arg=0x3fc94728
+V (5999) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (6009) wifi:scan specific ssid=FIZZ32119
+V (6009) wifi:start max timer
+D (6139) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6139) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (6139) wifi:change: chan<4,0>, dur<0,120>
+V (6139) wifi:ht20 freq=2427, chan=4
+V (6139) wifi:enter start op, arg=0x3fc94728
+V (6149) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (6149) wifi:scan specific ssid=FIZZ32119
+V (6159) wifi:start max timer
+D (6279) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6279) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (6279) wifi:change: chan<5,0>, dur<0,120>
+V (6279) wifi:ht20 freq=2432, chan=5
+V (6289) wifi:enter start op, arg=0x3fc94728
+V (6289) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (6299) wifi:scan specific ssid=FIZZ32119
+V (6299) wifi:start max timer
+D (6419) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6419) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (6429) wifi:change: chan<7,0>, dur<0,120>
+V (6429) wifi:ht20 freq=2442, chan=7
+V (6429) wifi:enter start op, arg=0x3fc94728
+V (6439) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (6439) wifi:scan specific ssid=FIZZ32119
+V (6449) wifi:start max timer
+D (6569) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6569) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (6569) wifi:change: chan<8,0>, dur<0,120>
+V (6569) wifi:ht20 freq=2447, chan=8
+V (6579) wifi:enter start op, arg=0x3fc94728
+V (6579) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (6589) wifi:scan specific ssid=FIZZ32119
+V (6589) wifi:start max timer
+D (6709) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6709) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (6709) wifi:change: chan<9,0>, dur<0,120>
+V (6719) wifi:ht20 freq=2452, chan=9
+V (6719) wifi:enter start op, arg=0x3fc94728
+V (6719) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (6729) wifi:scan specific ssid=FIZZ32119
+V (6729) wifi:start max timer
+D (6859) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6859) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (6859) wifi:change: chan<10,0>, dur<0,120>
+V (6859) wifi:ht20 freq=2457, chan=10
+V (6869) wifi:enter start op, arg=0x3fc94728
+V (6869) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (6879) wifi:scan specific ssid=FIZZ32119
+V (6879) wifi:start max timer
+D (6999) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6999) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (6999) wifi:change: chan<11,0>, dur<0,120>
+V (7009) wifi:ht20 freq=2462, chan=11
+V (7009) wifi:enter start op, arg=0x3fc94728
+V (7009) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (7019) wifi:scan specific ssid=FIZZ32119
+V (7019) wifi:start max timer
+D (7149) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7149) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (7149) wifi:change: chan<12,0>, dur<360,360>
+V (7149) wifi:ht20 freq=2467, chan=12
+V (7149) wifi:enter start op, arg=0x3fc94728
+V (7159) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (7169) wifi:passive scan, listen only
+V (7169) wifi:start max timer
+D (7529) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7529) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (7529) wifi:change: chan<13,0>, dur<360,360>
+V (7539) wifi:ht20 freq=2472, chan=13
+V (7539) wifi:enter start op, arg=0x3fc94728
+V (7539) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (7549) wifi:passive scan, listen only
+V (7549) wifi:start max timer
+D (7919) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7919) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (7919) wifi:change: chan<14,0>, dur<360,360>
+V (7919) wifi:ht20 freq=2484, chan=14
+V (7919) wifi:enter start op, arg=0x3fc94728
+V (7929) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (7929) wifi:passive scan, listen only
+V (7939) wifi:start max timer
+D (8299) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (8299) wifi:back home chan=<6,0>, current chan=<14,0>
+V (8299) wifi:ht20 freq=2437, chan=6
+D (8299) wifi:filter: set rx policy=4
+D (8309) wifi:first chan=1
+V (8309) wifi:scan_done: arg=0x0, status=0, cur_time=8332853, scan_id=128, scan state=0
+V (8319) wifi:call scan_done cb, arg=0x0
+D (8319) wifi:handoff_cb: status=0
+D (8319) wifi:clear rc list
+D (8329) wifi:clear blacklist
+D (8329) wifi:Send disconnect event, reason=205
+D (8329) wifi:connect status 1 -> 3
+D (8339) wifi:disable connect timer
+D (8339) wifi:clear scan ap list
+D (8339) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (8349) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (8359) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (8369) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (8369) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (8379) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (8389) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (8399) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (8399) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (8409) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (8419) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (8419) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (8429) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (8439) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (8439) wifi:Start wifi connect
+D (8439) wifi:connect status 3 -> 0
+D (8449) wifi:connect chan=0
+V (8449) wifi:history=0, ssid=FIZZ32119, channel=6
+V (8459) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (8459) wifi:first chan=6
+D (8459) wifi:connect status 0 -> 1
+D (8469) wifi:filter: set rx policy=3
+D (8469) wifi:clear scan ap list
+D (8469) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=8495778, index=0
+V (8479) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (8489) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (8489) wifi:change: chan<6,0>, dur<0,120>
+V (8499) wifi:enter start op, arg=0x3fc94728
+V (8499) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (8509) wifi:scan specific ssid=FIZZ32119
+V (8509) wifi:start max timer
+[0;32mI (8509) wifi station: retry to connect to the AP[0m
+[0;32mI (8519) wifi station: connect to the AP fail[0m
+D (8519) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (8529) wifi:updated connection retries to 0
+D (8529) wifi:profile match: ss_state=0x7
+V (8539) wifi:update scan history ssid=FIZZ32119, channel=6
+D (8539) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (8549) wifi:updated connection retries to 0
+D (8549) wifi:profile match: ss_state=0x7
+V (8549) wifi:update scan history ssid=FIZZ32119, channel=6
+D (8559) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (8559) wifi:find first mathched ssid, scan done
+V (8569) wifi:back home chan=<6,0>, current chan=<6,0>
+D (8569) wifi:filter: set rx policy=4
+D (8579) wifi:first chan=1
+V (8579) wifi:scan_done: arg=0x0, status=0, cur_time=8603485, scan_id=128, scan state=0
+V (8589) wifi:call scan_done cb, arg=0x0
+D (8589) wifi:handoff_cb: status=0
+V (8589) wifi:best bss has set.
+D (8599) wifi:ap found, mac=34:98:b5:09:c9:bd
+V (8599) wifi:bssid=34:98:b5:09:c9:bd, LR=0
+D (8609) wifi:new_bss=0x3fc94cc8, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (8609) wifi:filter: set rx policy=5
+I (8619) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (8619) wifi:connect_op: status=0, auth=5, cipher=3 
+D (8629) wifi:auth mode is not none
+D (8629) wifi:connect_bss: auth=1, reconnect=0
+I (8629) wifi:state: init -> auth (b0)
+D (8639) wifi:start 1s AUTH timer
+D (8639) wifi:clear scan ap list
+D (9639) wifi:auth timeout
+I (9639) wifi:state: auth -> init (200)
+D (9639) wifi:connect status 1 -> 4
+D (9639) wifi:stop beacon/connect timer
+D (9639) wifi:reason: auth expire(2)
+D (9649) wifi:add bssid 34:98:b5:09:c9:bd to blacklist, cnt=0
+D (9649) wifi:stop CSA timer
+V (9649) wifi:bss connection retry cnt=0
+D (9659) wifi:remove 34:98:b5:09:c9:bd from rc list
+I (9659) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (9669) wifi:filter: set rx policy=8
+D (9669) wifi:Try to connect with next matched AP
+V (9679) wifi:best bss has set.
+D (9679) wifi:ap found, mac=34:98:b5:09:bd:d2
+V (9679) wifi:bssid=34:98:b5:09:bd:d2, LR=0
+D (9689) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (9689) wifi:filter: set rx policy=5
+I (9699) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (9699) wifi:connect_op: status=0, auth=5, cipher=3 
+D (9709) wifi:auth mode is not none
+D (9709) wifi:connect_bss: auth=1, reconnect=0
+I (9709) wifi:state: init -> auth (b0)
+D (9719) wifi:start 1s AUTH timer
+D (10719) wifi:auth timeout
+I (10719) wifi:state: auth -> init (200)
+D (10719) wifi:connect status 4 -> 4
+D (10719) wifi:stop beacon/connect timer
+D (10719) wifi:reason: auth expire(2)
+D (10729) wifi:add bssid 34:98:b5:09:bd:d2 to blacklist, cnt=1
+D (10729) wifi:stop CSA timer
+V (10729) wifi:bss connection retry cnt=0
+D (10739) wifi:remove 34:98:b5:09:bd:d2 from rc list
+I (10739) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (10749) wifi:filter: set rx policy=8
+D (10749) wifi:Send disconnect event, reason=2, AP number=0
+D (10759) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (10769) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (10779) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (10779) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (10789) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (10799) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (10809) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (10809) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (10819) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (10829) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (10829) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (10839) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (10839) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (10849) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (10859) wifi:Start wifi connect
+D (10859) wifi:connect status 4 -> 0
+D (10859) wifi:connect chan=0
+V (10869) wifi:history=0, ssid=FIZZ32119, channel=6
+V (10869) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (10879) wifi:first chan=6
+D (10879) wifi:connect status 0 -> 1
+D (10879) wifi:filter: set rx policy=3
+D (10889) wifi:clear scan ap list
+D (10889) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=10913228, index=0
+V (10899) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (10899) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (10909) wifi:change: chan<6,0>, dur<0,120>
+V (10909) wifi:enter start op, arg=0x3fc94728
+V (10919) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (10929) wifi:scan specific ssid=FIZZ32119
+V (10929) wifi:start max timer
+D (10929) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (10939) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+[0;32mI (10939) wifi station: retry to connect to the AP[0m
+[0;32mI (10949) wifi station: connect to the AP fail[0m
+D (10979) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (10979) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (10999) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (10999) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+D (11029) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (11029) wifi:updated connection retries to 0
+D (11039) wifi:profile match: ss_state=0x7
+V (11039) wifi:update scan history ssid=FIZZ32119, channel=6
+D (11039) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (11049) wifi:find first mathched ssid, scan done
+V (11049) wifi:back home chan=<6,0>, current chan=<6,0>
+D (11059) wifi:filter: set rx policy=4
+D (11059) wifi:first chan=1
+V (11059) wifi:scan_done: arg=0x0, status=0, cur_time=11085562, scan_id=128, scan state=0
+V (11069) wifi:call scan_done cb, arg=0x0
+D (11069) wifi:handoff_cb: status=0
+V (11079) wifi:best bss has set.
+D (11079) wifi:ap found, mac=bc:3e:07:25:41:48
+V (11079) wifi:bssid=bc:3e:07:25:41:48, LR=0
+D (11089) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (11089) wifi:filter: set rx policy=5
+I (11099) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (11099) wifi:connect_op: status=0, auth=5, cipher=3 
+D (11109) wifi:auth mode is not none
+D (11109) wifi:connect_bss: auth=1, reconnect=0
+I (11119) wifi:state: init -> auth (b0)
+D (11119) wifi:start 1s AUTH timer
+D (11119) wifi:clear scan ap list
+D (12119) wifi:auth timeout
+I (12119) wifi:state: auth -> init (200)
+D (12119) wifi:connect status 1 -> 4
+D (12119) wifi:stop beacon/connect timer
+D (12129) wifi:reason: auth expire(2)
+D (12129) wifi:add bssid bc:3e:07:25:41:48 to blacklist, cnt=2
+D (12139) wifi:stop CSA timer
+V (12139) wifi:bss connection retry cnt=0
+D (12139) wifi:remove bc:3e:07:25:41:48 from rc list
+I (12149) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (12149) wifi:filter: set rx policy=8
+D (12159) wifi:Send disconnect event, reason=2, AP number=0
+D (12159) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (12169) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (12179) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (12189) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (12189) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (12199) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (12209) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (12219) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (12219) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (12229) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (12229) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (12239) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (12249) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (12259) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (12259) wifi:Start wifi connect
+D (12259) wifi:connect status 4 -> 0
+D (12269) wifi:connect chan=0
+V (12269) wifi:history=0, ssid=FIZZ32119, channel=6
+V (12269) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (12279) wifi:first chan=6
+D (12279) wifi:connect status 0 -> 1
+D (12289) wifi:filter: set rx policy=3
+D (12289) wifi:clear scan ap list
+D (12289) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=12315701, index=0
+V (12299) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (12309) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (12309) wifi:change: chan<6,0>, dur<0,120>
+V (12319) wifi:enter start op, arg=0x3fc94728
+V (12319) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (12329) wifi:scan specific ssid=FIZZ32119
+V (12329) wifi:start max timer
+D (12329) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (12339) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (12339) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (12349) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+[0;32mI (12349) wifi station: retry to connect to the AP[0m
+[0;32mI (12359) wifi station: connect to the AP fail[0m
+D (12409) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (12409) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (12429) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (12429) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+D (12449) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (12449) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (12459) wifi:change: chan<1,0>, dur<0,120>
+V (12459) wifi:ht20 freq=2412, chan=1
+V (12459) wifi:enter start op, arg=0x3fc94728
+V (12469) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (12469) wifi:scan specific ssid=FIZZ32119
+V (12479) wifi:start max timer
+D (12599) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (12599) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (12599) wifi:change: chan<2,0>, dur<0,120>
+V (12599) wifi:ht20 freq=2417, chan=2
+V (12609) wifi:enter start op, arg=0x3fc94728
+V (12609) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (12619) wifi:scan specific ssid=FIZZ32119
+V (12619) wifi:start max timer
+D (12739) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (12739) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (12749) wifi:change: chan<3,0>, dur<0,120>
+V (12749) wifi:ht20 freq=2422, chan=3
+V (12749) wifi:enter start op, arg=0x3fc94728
+V (12759) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (12759) wifi:scan specific ssid=FIZZ32119
+V (12769) wifi:start max timer
+D (12889) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (12889) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (12889) wifi:change: chan<4,0>, dur<0,120>
+V (12889) wifi:ht20 freq=2427, chan=4
+V (12899) wifi:enter start op, arg=0x3fc94728
+V (12899) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (12909) wifi:scan specific ssid=FIZZ32119
+V (12909) wifi:start max timer
+D (13029) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13039) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (13039) wifi:change: chan<5,0>, dur<0,120>
+V (13039) wifi:ht20 freq=2432, chan=5
+V (13039) wifi:enter start op, arg=0x3fc94728
+V (13049) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (13049) wifi:scan specific ssid=FIZZ32119
+V (13059) wifi:start max timer
+D (13179) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13179) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (13179) wifi:change: chan<7,0>, dur<0,120>
+V (13179) wifi:ht20 freq=2442, chan=7
+V (13189) wifi:enter start op, arg=0x3fc94728
+V (13189) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (13199) wifi:scan specific ssid=FIZZ32119
+V (13199) wifi:start max timer
+D (13319) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13329) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (13329) wifi:change: chan<8,0>, dur<0,120>
+V (13329) wifi:ht20 freq=2447, chan=8
+V (13329) wifi:enter start op, arg=0x3fc94728
+V (13339) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (13339) wifi:scan specific ssid=FIZZ32119
+V (13349) wifi:start max timer
+D (13469) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13469) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (13469) wifi:change: chan<9,0>, dur<0,120>
+V (13469) wifi:ht20 freq=2452, chan=9
+V (13479) wifi:enter start op, arg=0x3fc94728
+V (13479) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (13489) wifi:scan specific ssid=FIZZ32119
+V (13489) wifi:start max timer
+D (13609) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13619) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (13619) wifi:change: chan<10,0>, dur<0,120>
+V (13619) wifi:ht20 freq=2457, chan=10
+V (13619) wifi:enter start op, arg=0x3fc94728
+V (13629) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (13629) wifi:scan specific ssid=FIZZ32119
+V (13639) wifi:start max timer
+D (13759) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13759) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (13759) wifi:change: chan<11,0>, dur<0,120>
+V (13759) wifi:ht20 freq=2462, chan=11
+V (13769) wifi:enter start op, arg=0x3fc94728
+V (13769) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (13779) wifi:scan specific ssid=FIZZ32119
+V (13779) wifi:start max timer
+D (13909) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13909) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (13909) wifi:change: chan<12,0>, dur<360,360>
+V (13909) wifi:ht20 freq=2467, chan=12
+V (13909) wifi:enter start op, arg=0x3fc94728
+V (13919) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (13919) wifi:passive scan, listen only
+V (13929) wifi:start max timer
+D (14289) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14289) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (14289) wifi:change: chan<13,0>, dur<360,360>
+V (14299) wifi:ht20 freq=2472, chan=13
+V (14299) wifi:enter start op, arg=0x3fc94728
+V (14299) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (14309) wifi:passive scan, listen only
+V (14309) wifi:start max timer
+D (14679) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14679) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (14679) wifi:change: chan<14,0>, dur<360,360>
+V (14679) wifi:ht20 freq=2484, chan=14
+V (14679) wifi:enter start op, arg=0x3fc94728
+V (14689) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (14699) wifi:passive scan, listen only
+V (14699) wifi:start max timer
+D (15059) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (15059) wifi:back home chan=<6,0>, current chan=<14,0>
+V (15059) wifi:ht20 freq=2437, chan=6
+D (15059) wifi:filter: set rx policy=4
+D (15069) wifi:first chan=1
+V (15069) wifi:scan_done: arg=0x0, status=0, cur_time=15093848, scan_id=128, scan state=0
+V (15079) wifi:call scan_done cb, arg=0x0
+D (15079) wifi:handoff_cb: status=0
+D (15089) wifi:clear rc list
+D (15089) wifi:clear blacklist
+D (15089) wifi:Send disconnect event, reason=205
+D (15089) wifi:connect status 1 -> 3
+D (15099) wifi:disable connect timer
+D (15099) wifi:clear scan ap list
+D (15099) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (15109) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (15119) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (15129) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (15139) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (15139) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (15149) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (15159) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (15169) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (15169) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (15179) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (15179) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (15189) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (15199) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (15209) wifi:Start wifi connect
+D (15209) wifi:connect status 3 -> 0
+D (15209) wifi:connect chan=0
+V (15209) wifi:history=0, ssid=FIZZ32119, channel=6
+V (15219) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (15219) wifi:first chan=6
+D (15229) wifi:connect status 0 -> 1
+D (15229) wifi:filter: set rx policy=3
+D (15229) wifi:clear scan ap list
+D (15239) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=15259639, index=0
+V (15249) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (15249) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (15259) wifi:change: chan<6,0>, dur<0,120>
+V (15259) wifi:enter start op, arg=0x3fc94728
+V (15259) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (15269) wifi:scan specific ssid=FIZZ32119
+V (15279) wifi:start max timer
+[0;32mI (15279) wifi station: retry to connect to the AP[0m
+[0;32mI (15279) wifi station: connect to the AP fail[0m
+D (15279) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (15289) wifi:updated connection retries to 0
+D (15299) wifi:profile match: ss_state=0x7
+V (15299) wifi:update scan history ssid=FIZZ32119, channel=6
+D (15309) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (15309) wifi:updated connection retries to 0
+D (15319) wifi:profile match: ss_state=0x7
+V (15319) wifi:update scan history ssid=FIZZ32119, channel=6
+D (15329) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (15329) wifi:find first mathched ssid, scan done
+V (15329) wifi:back home chan=<6,0>, current chan=<6,0>
+D (15339) wifi:filter: set rx policy=4
+D (15339) wifi:first chan=1
+V (15349) wifi:scan_done: arg=0x0, status=0, cur_time=15369430, scan_id=128, scan state=0
+V (15349) wifi:call scan_done cb, arg=0x0
+D (15359) wifi:handoff_cb: status=0
+V (15359) wifi:best bss has set.
+D (15359) wifi:ap found, mac=34:98:b5:09:c9:bd
+V (15369) wifi:bssid=34:98:b5:09:c9:bd, LR=0
+D (15369) wifi:new_bss=0x3fc94cc8, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (15379) wifi:filter: set rx policy=5
+I (15379) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (15389) wifi:connect_op: status=0, auth=5, cipher=3 
+D (15389) wifi:auth mode is not none
+D (15399) wifi:connect_bss: auth=1, reconnect=0
+I (15399) wifi:state: init -> auth (b0)
+D (15399) wifi:start 1s AUTH timer
+D (15409) wifi:clear scan ap list
+D (16409) wifi:auth timeout
+I (16409) wifi:state: auth -> init (200)
+D (16409) wifi:connect status 1 -> 4
+D (16409) wifi:stop beacon/connect timer
+D (16409) wifi:reason: auth expire(2)
+D (16409) wifi:add bssid 34:98:b5:09:c9:bd to blacklist, cnt=0
+D (16419) wifi:stop CSA timer
+V (16419) wifi:bss connection retry cnt=0
+D (16419) wifi:remove 34:98:b5:09:c9:bd from rc list
+I (16429) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (16439) wifi:filter: set rx policy=8
+D (16439) wifi:Try to connect with next matched AP
+V (16439) wifi:best bss has set.
+D (16449) wifi:ap found, mac=34:98:b5:09:bd:d2
+V (16449) wifi:bssid=34:98:b5:09:bd:d2, LR=0
+D (16449) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (16459) wifi:filter: set rx policy=5
+I (16459) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (16469) wifi:connect_op: status=0, auth=5, cipher=3 
+D (16479) wifi:auth mode is not none
+D (16479) wifi:connect_bss: auth=1, reconnect=0
+I (16479) wifi:state: init -> auth (b0)
+D (16489) wifi:start 1s AUTH timer
+D (17489) wifi:auth timeout
+I (17489) wifi:state: auth -> init (200)
+D (17489) wifi:connect status 4 -> 4
+D (17489) wifi:stop beacon/connect timer
+D (17489) wifi:reason: auth expire(2)
+D (17499) wifi:add bssid 34:98:b5:09:bd:d2 to blacklist, cnt=1
+D (17499) wifi:stop CSA timer
+V (17499) wifi:bss connection retry cnt=0
+D (17509) wifi:remove 34:98:b5:09:bd:d2 from rc list
+I (17509) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (17519) wifi:filter: set rx policy=8
+D (17519) wifi:Send disconnect event, reason=2, AP number=0
+D (17529) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (17539) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (17549) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (17549) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (17559) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (17569) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (17579) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (17579) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (17589) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (17589) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (17599) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (17609) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (17609) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (17619) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (17629) wifi:Start wifi connect
+D (17629) wifi:connect status 4 -> 0
+D (17629) wifi:connect chan=0
+V (17639) wifi:history=0, ssid=FIZZ32119, channel=6
+V (17639) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (17649) wifi:first chan=6
+D (17649) wifi:connect status 0 -> 1
+D (17649) wifi:filter: set rx policy=3
+D (17659) wifi:clear scan ap list
+D (17659) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=17682457, index=0
+V (17669) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (17669) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (17679) wifi:change: chan<6,0>, dur<0,120>
+V (17679) wifi:enter start op, arg=0x3fc94728
+V (17689) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (17689) wifi:scan specific ssid=FIZZ32119
+V (17699) wifi:start max timer
+[0;32mI (17699) wifi station: retry to connect to the AP[0m
+[0;32mI (17709) wifi station: connect to the AP fail[0m
+D (17739) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (17739) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (17759) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (17759) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+D (17789) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (17789) wifi:updated connection retries to 0
+D (17789) wifi:profile match: ss_state=0x7
+V (17789) wifi:update scan history ssid=FIZZ32119, channel=6
+D (17799) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (17809) wifi:find first mathched ssid, scan done
+V (17809) wifi:back home chan=<6,0>, current chan=<6,0>
+D (17809) wifi:filter: set rx policy=4
+D (17819) wifi:first chan=1
+V (17819) wifi:scan_done: arg=0x0, status=0, cur_time=17844315, scan_id=128, scan state=0
+V (17829) wifi:call scan_done cb, arg=0x0
+D (17829) wifi:handoff_cb: status=0
+V (17839) wifi:best bss has set.
+D (17839) wifi:ap found, mac=bc:3e:07:25:41:48
+V (17839) wifi:bssid=bc:3e:07:25:41:48, LR=0
+D (17849) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (17849) wifi:filter: set rx policy=5
+I (17859) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (17859) wifi:connect_op: status=0, auth=5, cipher=3 
+D (17869) wifi:auth mode is not none
+D (17869) wifi:connect_bss: auth=1, reconnect=0
+I (17879) wifi:state: init -> auth (b0)
+D (17879) wifi:start 1s AUTH timer
+D (17879) wifi:clear scan ap list
+D (18879) wifi:auth timeout
+I (18879) wifi:state: auth -> init (200)
+D (18879) wifi:connect status 1 -> 4
+D (18879) wifi:stop beacon/connect timer
+D (18879) wifi:reason: auth expire(2)
+D (18889) wifi:add bssid bc:3e:07:25:41:48 to blacklist, cnt=2
+D (18899) wifi:stop CSA timer
+V (18899) wifi:bss connection retry cnt=0
+D (18899) wifi:remove bc:3e:07:25:41:48 from rc list
+I (18899) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (18909) wifi:filter: set rx policy=8
+D (18909) wifi:Send disconnect event, reason=2, AP number=0
+D (18919) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (18929) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (18939) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (18939) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (18949) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (18959) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (18969) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (18969) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (18979) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (18989) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (18989) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (18999) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (18999) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (19009) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (19019) wifi:Start wifi connect
+D (19019) wifi:connect status 4 -> 0
+D (19029) wifi:connect chan=0
+V (19029) wifi:history=0, ssid=FIZZ32119, channel=6
+V (19029) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (19039) wifi:first chan=6
+D (19039) wifi:connect status 0 -> 1
+D (19039) wifi:filter: set rx policy=3
+D (19049) wifi:clear scan ap list
+D (19049) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=19074454, index=0
+V (19059) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (19069) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (19069) wifi:change: chan<6,0>, dur<0,120>
+V (19079) wifi:enter start op, arg=0x3fc94728
+V (19079) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (19089) wifi:scan specific ssid=FIZZ32119
+V (19089) wifi:start max timer
+D (19089) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (19099) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (19099) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (19109) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+[0;32mI (19109) wifi station: retry to connect to the AP[0m
+[0;32mI (19119) wifi station: connect to the AP fail[0m
+D (19169) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (19169) wifi:find the 34:98:b5:09:bd:d2 in blacklist.
+
+D (19189) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+D (19189) wifi:find the 34:98:b5:09:c9:bd in blacklist.
+
+D (19209) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19209) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (19209) wifi:change: chan<1,0>, dur<0,120>
+V (19219) wifi:ht20 freq=2412, chan=1
+V (19219) wifi:enter start op, arg=0x3fc94728
+V (19219) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (19229) wifi:scan specific ssid=FIZZ32119
+V (19239) wifi:start max timer
+D (19359) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19359) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (19359) wifi:change: chan<2,0>, dur<0,120>
+V (19359) wifi:ht20 freq=2417, chan=2
+V (19369) wifi:enter start op, arg=0x3fc94728
+V (19369) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (19379) wifi:scan specific ssid=FIZZ32119
+V (19379) wifi:start max timer
+D (19499) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19499) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (19499) wifi:change: chan<3,0>, dur<0,120>
+V (19509) wifi:ht20 freq=2422, chan=3
+V (19509) wifi:enter start op, arg=0x3fc94728
+V (19509) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (19519) wifi:scan specific ssid=FIZZ32119
+V (19529) wifi:start max timer
+D (19649) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19649) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (19649) wifi:change: chan<4,0>, dur<0,120>
+V (19649) wifi:ht20 freq=2427, chan=4
+V (19659) wifi:enter start op, arg=0x3fc94728
+V (19659) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (19669) wifi:scan specific ssid=FIZZ32119
+V (19669) wifi:start max timer
+D (19789) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19789) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (19789) wifi:change: chan<5,0>, dur<0,120>
+V (19799) wifi:ht20 freq=2432, chan=5
+V (19799) wifi:enter start op, arg=0x3fc94728
+V (19799) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (19809) wifi:scan specific ssid=FIZZ32119
+V (19819) wifi:start max timer
+D (19939) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19939) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (19939) wifi:change: chan<7,0>, dur<0,120>
+V (19939) wifi:ht20 freq=2442, chan=7
+V (19949) wifi:enter start op, arg=0x3fc94728
+V (19949) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (19959) wifi:scan specific ssid=FIZZ32119
+V (19959) wifi:start max timer
+D (20079) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20079) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (20079) wifi:change: chan<8,0>, dur<0,120>
+V (20089) wifi:ht20 freq=2447, chan=8
+V (20089) wifi:enter start op, arg=0x3fc94728
+V (20089) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (20099) wifi:scan specific ssid=FIZZ32119
+V (20109) wifi:start max timer
+D (20229) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20229) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (20229) wifi:change: chan<9,0>, dur<0,120>
+V (20229) wifi:ht20 freq=2452, chan=9
+V (20239) wifi:enter start op, arg=0x3fc94728
+V (20239) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (20249) wifi:scan specific ssid=FIZZ32119
+V (20249) wifi:start max timer
+D (20369) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20369) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (20369) wifi:change: chan<10,0>, dur<0,120>
+V (20379) wifi:ht20 freq=2457, chan=10
+V (20379) wifi:enter start op, arg=0x3fc94728
+V (20389) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (20389) wifi:scan specific ssid=FIZZ32119
+V (20399) wifi:start max timer
+D (20519) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20519) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (20519) wifi:change: chan<11,0>, dur<0,120>
+V (20519) wifi:ht20 freq=2462, chan=11
+V (20529) wifi:enter start op, arg=0x3fc94728
+V (20529) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (20539) wifi:scan specific ssid=FIZZ32119
+V (20539) wifi:start max timer
+D (20659) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20659) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (20669) wifi:change: chan<12,0>, dur<360,360>
+V (20669) wifi:ht20 freq=2467, chan=12
+V (20669) wifi:enter start op, arg=0x3fc94728
+V (20679) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (20679) wifi:passive scan, listen only
+V (20689) wifi:start max timer
+D (21049) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (21049) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (21049) wifi:change: chan<13,0>, dur<360,360>
+V (21049) wifi:ht20 freq=2472, chan=13
+V (21059) wifi:enter start op, arg=0x3fc94728
+V (21059) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (21069) wifi:passive scan, listen only
+V (21069) wifi:start max timer
+D (21439) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (21439) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (21439) wifi:change: chan<14,0>, dur<360,360>
+V (21439) wifi:ht20 freq=2484, chan=14
+V (21439) wifi:enter start op, arg=0x3fc94728
+V (21449) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (21449) wifi:passive scan, listen only
+V (21459) wifi:start max timer
+D (21819) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (21819) wifi:back home chan=<6,0>, current chan=<14,0>
+V (21819) wifi:ht20 freq=2437, chan=6
+D (21819) wifi:filter: set rx policy=4
+D (21829) wifi:first chan=1
+V (21829) wifi:scan_done: arg=0x0, status=0, cur_time=21852665, scan_id=128, scan state=0
+V (21839) wifi:call scan_done cb, arg=0x0
+D (21839) wifi:handoff_cb: status=0
+D (21839) wifi:clear rc list
+D (21849) wifi:clear blacklist
+D (21849) wifi:Send disconnect event, reason=205
+D (21849) wifi:connect status 1 -> 3
+D (21859) wifi:disable connect timer
+D (21859) wifi:clear scan ap list
+D (21859) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (21869) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (21879) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (21889) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (21889) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (21899) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (21909) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (21919) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (21929) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (21929) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (21939) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (21939) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (21949) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (21959) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (21959) wifi:Start wifi connect
+D (21969) wifi:connect status 3 -> 0
+D (21969) wifi:connect chan=0
+V (21969) wifi:history=0, ssid=FIZZ32119, channel=6
+V (21979) wifi:ssid=FIZZ32119 match history 0, channel=6
+D (21979) wifi:first chan=6
+D (21979) wifi:connect status 0 -> 1
+D (21989) wifi:filter: set rx policy=3
+D (21989) wifi:clear scan ap list
+D (21989) wifi:start scan: type=0x50f, priority=2, cb=0x42036876, arg=0x0, ss_state=0x1, time=22018465, index=0
+V (21999) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (22009) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (22019) wifi:change: chan<6,0>, dur<0,120>
+V (22019) wifi:enter start op, arg=0x3fc94728
+V (22019) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (22029) wifi:scan specific ssid=FIZZ32119
+V (22029) wifi:start max timer
+[0;32mI (22039) wifi station: retry to connect to the AP[0m
+[0;32mI (22039) wifi station: connect to the AP fail[0m
+D (22039) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (22049) wifi:updated connection retries to 0
+D (22059) wifi:profile match: ss_state=0x7
+V (22059) wifi:update scan history ssid=FIZZ32119, channel=6
+D (22069) wifi:rsn valid: gcipher=3 ucipher=3 akm=5
+
+V (22069) wifi:updated connection retries to 0
+D (22079) wifi:profile match: ss_state=0x7
+V (22079) wifi:update scan history ssid=FIZZ32119, channel=6
+D (22079) wifi:scan end: arg=0x0, status=0, ss_state=0x7
+D (22089) wifi:find first mathched ssid, scan done
+V (22089) wifi:back home chan=<6,0>, current chan=<6,0>
+D (22099) wifi:filter: set rx policy=4
+D (22099) wifi:first chan=1
+V (22099) wifi:scan_done: arg=0x0, status=0, cur_time=22128245, scan_id=128, scan state=0
+V (22109) wifi:call scan_done cb, arg=0x0
+D (22119) wifi:handoff_cb: status=0
+V (22119) wifi:best bss has set.
+D (22119) wifi:ap found, mac=34:98:b5:09:c9:bd
+V (22129) wifi:bssid=34:98:b5:09:c9:bd, LR=0
+D (22129) wifi:new_bss=0x3fc94cc8, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (22139) wifi:filter: set rx policy=5
+I (22139) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (22149) wifi:connect_op: status=0, auth=5, cipher=3 
+D (22149) wifi:auth mode is not none
+D (22149) wifi:connect_bss: auth=1, reconnect=0
+I (22159) wifi:state: init -> auth (b0)
+D (22159) wifi:start 1s AUTH timer
+D (22169) wifi:clear scan ap list
+D (23169) wifi:auth timeout
+I (23169) wifi:state: auth -> init (200)
+D (23169) wifi:connect status 1 -> 4
+D (23169) wifi:stop beacon/connect timer
+D (23169) wifi:reason: auth expire(2)
+D (23169) wifi:add bssid 34:98:b5:09:c9:bd to blacklist, cnt=0
+D (23179) wifi:stop CSA timer
+V (23179) wifi:bss connection retry cnt=0
+D (23179) wifi:remove 34:98:b5:09:c9:bd from rc list
+I (23189) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (23189) wifi:filter: set rx policy=8
+D (23199) wifi:Try to connect with next matched AP
+V (23199) wifi:best bss has set.
+D (23209) wifi:ap found, mac=34:98:b5:09:bd:d2
+V (23209) wifi:bssid=34:98:b5:09:bd:d2, LR=0
+D (23209) wifi:new_bss=0x3fc94908, cur_bss=0x0, new_chan=<6,0>, cur_chan=6
+D (23219) wifi:filter: set rx policy=5
+I (23219) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (23229) wifi:connect_op: status=0, auth=5, cipher=3 
+D (23229) wifi:auth mode is not none
+D (23239) wifi:connect_bss: auth=1, reconnect=0
+I (23239) wifi:state: init -> auth (b0)
+D (23249) wifi:start 1s AUTH timer
+D (24249) wifi:auth timeout
+I (24249) wifi:state: auth -> init (200)
+D (24249) wifi:connect status 4 -> 4
+D (24249) wifi:stop beacon/connect timer
+D (24249) wifi:reason: auth expire(2)
+D (24249) wifi:add bssid 34:98:b5:09:bd:d2 to blacklist, cnt=1
+D (24259) wifi:stop CSA timer
+V (24259) wifi:bss connection retry cnt=0
+D (24269) wifi:remove 34:98:b5:09:bd:d2 from rc list
+I (24269) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+D (24279) wifi:filter: set rx policy=8
+D (24279) wifi:Send disconnect event, reason=2, AP number=0
+D (24289) event: running post WIFI_EVENT:5 with handler 0x4201487a and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (24299) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (24299) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7e
+[0m
+D (24309) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (24319) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (24319) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (24339) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x42012292
+[0m
+D (24339) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (24349) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (24349) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (24359) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (24369) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (24369) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+[0;32mI (24379) wifi station: connect to the AP fail[0m
+[0;32mI (24389) wifi station: Failed to connect to SSID:********, password:wrongPassword[0m
+[0;32mI (24399) main_task: Returned from app_main()[0m
