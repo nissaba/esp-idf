@@ -1,0 +1,1990 @@
+Executing action: monitor
+Running idf_monitor in directory /Users/******/esp/esp-idf/examples/wifi/getting_started/station
+Executing "/Users/******/.espressif/python_env/idf5.1_py3.9_env/bin/python /Users/******/esp/v5.1-rc2/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem244301 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --decode-panic backtrace /Users/******/esp/esp-idf/examples/wifi/getting_started/station/build/wifi_station.elf -m '/Users/******/.espressif/python_env/idf5.1_py3.9_env/bin/python' '/Users/******/esp/v5.1-rc2/esp-idf/tools/idf.py' '-p' '/dev/cu.usbmodem244301'"...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038590a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x170c
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF v5.1-rc2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Feb 10 2024 12:54:58[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (28) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=23638h (144952) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=00033660 vaddr=3fc90600 size=02968h ( 10600) load[0m
+[0;32mI (119) esp_image: segment 2: paddr=00035fd0 vaddr=40380000 size=0a048h ( 41032) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=8b6c4h (571076) map[0m
+[0;32mI (222) esp_image: segment 4: paddr=000cb6ec vaddr=4038a048 size=0653ch ( 25916) load[0m
+[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+V (244) mmap: after coalescing, 1 regions are left[0m
+[0;32mI (244) cpu_start: Pro cpu up.[0m
+D (253) clk: RTC_SLOW_CLK calibration value: 3858854[0m
+V CACHE_ERR: access error intr clr & ena mask is: 0x3f
+V CACHE_ERR: illegal error intr clr & ena mask is: 0x23
+[0;32mI (262) cpu_start: Pro cpu start user code[0m
+[0;32mI (265) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (269) cpu_start: Application information:[0m
+[0;32mI (274) cpu_start: Project name:     wifi_station[0m
+[0;32mI (280) cpu_start: App version:      v5.1.1-dirty[0m
+[0;32mI (285) cpu_start: Compile time:     Feb 10 2024 14:50:42[0m
+[0;32mI (291) cpu_start: ELF file SHA256:  ad23ee831e8d2e88...[0m
+[0;32mI (297) cpu_start: ESP-IDF:          v5.1-rc2-dirty[0m
+[0;32mI (303) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (307) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (312) cpu_start: Chip rev:         v0.4[0m
+V (317) memory_layout: reserved range is 0x3c0b2e44 - 0x3c0b2e5c[0m
+D (323) memory_layout: Checking 4 reserved memory ranges:[0m
+D (328) memory_layout: Reserved memory range 0x3fc80000 - 0x3fc90600[0m
+D (335) memory_layout: Reserved memory range 0x3fc90600 - 0x3fc96ff0[0m
+D (341) memory_layout: Reserved memory range 0x3fcdf060 - 0x3fce0000[0m
+D (348) memory_layout: Reserved memory range 0x50000000 - 0x50000020[0m
+D (354) memory_layout: Building list of available memory regions:[0m
+V (360) memory_layout: Examining memory region 0x3fc80000 - 0x3fca0000[0m
+V (367) memory_layout: Start of region 0x3fc80000 - 0x3fca0000 overlaps reserved 0x3fc80000 - 0x3fc90600[0m
+V (376) memory_layout: Start of region 0x3fc90600 - 0x3fca0000 overlaps reserved 0x3fc90600 - 0x3fc96ff0[0m
+D (386) memory_layout: Available memory region 0x3fc96ff0 - 0x3fca0000[0m
+V (393) memory_layout: Examining memory region 0x3fca0000 - 0x3fcc0000[0m
+D (399) memory_layout: Available memory region 0x3fca0000 - 0x3fcc0000[0m
+V (406) memory_layout: Examining memory region 0x3fcc0000 - 0x3fcdc710[0m
+D (412) memory_layout: Available memory region 0x3fcc0000 - 0x3fcdc710[0m
+V (419) memory_layout: Examining memory region 0x3fcdc710 - 0x3fce0000[0m
+V (426) memory_layout: End of region 0x3fcdc710 - 0x3fce0000 overlaps reserved 0x3fcdf060 - 0x3fce0000[0m
+D (435) memory_layout: Available memory region 0x3fcdc710 - 0x3fcdf060[0m
+V (442) memory_layout: Examining memory region 0x50000000 - 0x50002000[0m
+V (448) memory_layout: Start of region 0x50000000 - 0x50002000 overlaps reserved 0x50000000 - 0x50000020[0m
+D (458) memory_layout: Available memory region 0x50000020 - 0x50002000[0m
+[0;32mI (464) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (472) heap_init: New heap initialised at 0x3fc96ff0[0m
+[0;32mI (477) heap_init: At 3FC96FF0 len 00045720 (277 KiB): DRAM[0m
+[0;32mI (483) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+D (490) heap_init: New heap initialised at 0x50000020[0m
+[0;32mI (495) heap_init: At 50000020 len 00001FE0 (7 KiB): RTCRAM[0m
+V (501) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (507) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (516) intr_alloc: Connected src 27 to int 2 (cpu 0)[0m
+V (521) memspi: raw_chip_id: 164020
+[0m
+V (524) memspi: chip_id: 204016
+[0m
+V (528) memspi: raw_chip_id: 164020
+[0m
+V (531) memspi: chip_id: 204016
+[0m
+D (535) spi_flash: trying chip: issi[0m
+D (538) spi_flash: trying chip: gd[0m
+D (542) spi_flash: trying chip: mxic[0m
+D (546) spi_flash: trying chip: winbond[0m
+D (549) spi_flash: trying chip: boya[0m
+D (553) spi_flash: trying chip: th[0m
+D (557) spi_flash: trying chip: generic[0m
+[0;32mI (560) spi_flash: detected chip: generic[0m
+[0;32mI (565) spi_flash: flash io: dio[0m
+[0;33mW (569) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (582) cpu_start: calling init function: 0x42076b6a[0m
+D (587) cpu_start: calling init function: 0x42076ac2[0m
+D (592) cpu_start: calling init function: 0x420768d2[0m
+D (597) cpu_start: calling init function: 0x42076410[0m
+D (602) cpu_start: calling init function: 0x42044b14[0m
+D (608) efuse: In EFUSE_BLK2__DATA4_REG is used 2 bits starting with 0 bit[0m
+D (614) efuse: In EFUSE_BLK2__DATA5_REG is used 10 bits starting with 18 bit[0m
+V (621) adc_share_hw_ctrl: Calib(V1) ADC2 atten=3: 06C4[0m
+D (627) cpu_start: calling init function: 0x4201441a[0m
+D (632) cpu_start: calling init function: 0x4200002a[0m
+D (637) cpu_start: calling init function: 0x42005bf8 on core: 0[0m
+V (643) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (649) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xC02[0m
+D (657) intr_alloc: Connected src 39 to int 3 (cpu 0)[0m
+D (662) cpu_start: calling init function: 0x420035b4 on core: 0[0m
+[0;32mI (669) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (675) sleep: Enable automatic switching of GPIO sleep configuration[0m
+D (682) cpu_start: calling init function: 0x420013ec on core: 0[0m
+V (688) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (695) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E[0m
+D (703) intr_alloc: Connected src 50 to int 4 (cpu 0)[0m
+[0;32mI (708) app_start: Starting scheduler on CPU0[0m
+V (713) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (713) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x402[0m
+D (713) intr_alloc: Connected src 37 to int 7 (cpu 0)[0m
+[0;32mI (713) main_task: Started on CPU0[0m
+D (713) heap_init: New heap initialised at 0x3fcdc710[0m
+V (713) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args[0m
+V (723) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xE[0m
+D (733) intr_alloc: Connected src 33 to int 9 (cpu 0)[0m
+[0;32mI (733) main_task: Calling app_main()[0m
+V (743) partition: Loading the partition table[0m
+V (743) mmap: actual_mapped_len is 0x10000[0m
+V (753) calculated md5: 0x3fc9a058   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (763) stored md5: 0x3c0c8070   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|[0m
+V (773) partition: Partition table MD5 verified[0m
+[0;32mI (783) wifi station: ESP_WIFI_MODE_STA[0m
+D (783) esp_netif_lwip: LwIP stack has been initialized[0m
+D (783) esp_netif_lwip: esp-netif has been successfully initialized[0m
+D (793) event: running task for loop 0x3fc9c51c[0m
+D (793) event: created task for loop 0x3fc9c51c[0m
+D (803) event: created event loop 0x3fc9c51c[0m
+D (803) esp_netif_objects: esp_netif_add_to_list 0x3fc9d444[0m
+D (813) esp_netif_objects: esp_netif_add_to_list netif added successfully (total netifs: 1)[0m
+D (813) esp_netif_lwip: check: remote, if=0x0 fn=0x42010a4c
+[0m
+D (823) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+[0;32mI (833) pp: pp rom version: 9387209[0m
+[0;32mI (833) net80211: net80211 rom version: 9387209[0m
+D (843) nvs: nvs_open_from_partition misc 1[0m
+I (853) wifi:wifi driver task: 3fc9fe40, prio:23, stack:6656, core=0
+V (853) esp_adapter: thread sem create: sem=0x3fc9ff98[0m
+V (853) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (863) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (863) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (873) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (883) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (883) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (893) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (903) nvs: nvs_open_from_partition nvs.net80211 1[0m
+D (903) nvs: nvs_get opmode 1[0m
+D (913) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (913) nvs: nvs_get sta.authmode 1[0m
+D (913) nvs: nvs_get_str_or_blob sta.pswd[0m
+D (923) nvs: nvs_get_str_or_blob sta.pmk[0m
+D (923) nvs: nvs_get sta.chan 1[0m
+D (923) nvs: nvs_get auto.conn 1[0m
+D (933) nvs: nvs_get bssid.set 1[0m
+D (933) nvs: nvs_get_str_or_blob sta.bssid[0m
+D (933) nvs: nvs_get sta.lis_intval 2[0m
+D (943) nvs: nvs_get sta.phym 1[0m
+D (943) nvs: nvs_get sta.phybw 1[0m
+D (953) nvs: nvs_get_str_or_blob sta.apsw[0m
+D (953) nvs: nvs_get_str_or_blob sta.apinfo[0m
+D (953) nvs: nvs_get sta.scan_method 1[0m
+D (963) nvs: nvs_get sta.sort_method 1[0m
+D (963) nvs: nvs_get sta.minrssi 1[0m
+D (963) nvs: nvs_get sta.minauth 1[0m
+D (973) nvs: nvs_get sta.pmf_e 1[0m
+D (973) nvs: nvs_get sta.pmf_r 1[0m
+D (973) nvs: nvs_get sta.btm_e 1[0m
+D (983) nvs: nvs_get sta.rrm_e 1[0m
+D (983) nvs: nvs_get sta.mbo_e 1[0m
+D (983) nvs: nvs_get_str_or_blob ap.ssid[0m
+D (993) nvs: nvs_get_str_or_blob ap.passwd[0m
+D (993) nvs: nvs_get_str_or_blob ap.pmk[0m
+D (1003) nvs: nvs_get ap.chan 1[0m
+D (1003) nvs: nvs_get ap.authmode 1[0m
+D (1003) nvs: nvs_get ap.hidden 1[0m
+D (1013) nvs: nvs_get ap.max.conn 1[0m
+D (1013) nvs: nvs_get bcn.interval 2[0m
+D (1013) nvs: nvs_get ap.phym 1[0m
+D (1023) nvs: nvs_get ap.phybw 1[0m
+D (1023) nvs: nvs_get ap.sndchan 1[0m
+D (1023) nvs: nvs_get ap.pmf_e 1[0m
+D (1033) nvs: nvs_get ap.pmf_r 1[0m
+D (1033) nvs: nvs_get ap.p_cipher 1[0m
+D (1033) nvs: nvs_get lorate 1[0m
+D (1043) nvs: nvs_get_str_or_blob country[0m
+D (1043) nvs: nvs_get ap.ftm_r 1[0m
+D (1043) nvs: nvs_get sta.ft 1[0m
+D (1053) nvs: nvs_get sta.owe 1[0m
+D (1053) nvs: nvs_get sta.trans_d 1[0m
+D (1053) nvs: nvs_get sta.sae_h2e 1[0m
+D (1063) nvs: nvs_get sta.sae_pk_mode 1[0m
+D (1063) nvs: nvs_get sta.bss_retry 1[0m
+D (1073) nvs: nvs_get_str_or_blob sta.owe_data[0m
+D (1073) nvs: nvs_get sta.he_dcm 1[0m
+D (1073) nvs: nvs_get sta.he_dcm_c_tx 1[0m
+D (1083) nvs: nvs_get sta.he_dcm_c_rx 1[0m
+D (1083) nvs: nvs_get sta.he_mcs9_d 1[0m
+D (1093) nvs: nvs_get sta.he_su_b_d 1[0m
+D (1093) nvs: nvs_get sta.he_su_b_f_d 1[0m
+D (1093) nvs: nvs_get sta.he_mu_b_f_d 1[0m
+D (1103) nvs: nvs_get sta.he_cqi_f_d 1[0m
+D (1103) nvs: nvs_get_str_or_blob sta.sae_h2e_id[0m
+D (1113) nvs: nvs_get ap.sae_h2e 1[0m
+D (1113) nvs: nvs_get_str_or_blob ap.pmk_info[0m
+D (1113) nvs: nvs_get nan.phym 1[0m
+D (1123) nvs: nvs_set ap.sndchan 1 1[0m
+I (1123) wifi:wifi firmware version: b2f1f86
+I (1123) wifi:wifi certification version: v7.0
+I (1133) wifi:config NVS flash: enabled
+I (1133) wifi:config nano formating: disabled
+I (1143) wifi:Init data frame dynamic rx buffer num: 32
+I (1143) wifi:Init management frame dynamic rx buffer num: 32
+I (1153) wifi:Init management short buffer num: 32
+I (1153) wifi:Init dynamic tx buffer num: 32
+I (1153) wifi:Init static tx FG buffer num: 2
+I (1163) wifi:Init static rx buffer size: 1600
+I (1163) wifi:Init static rx buffer num: 10
+I (1173) wifi:Init dynamic rx buffer num: 32
+V (1173) wifi:hint=255, act_dur=<0,120>, pas_dur=360, nchans=14 history_num=0
+V (1183) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+[0;32mI (1183) wifi_init: rx ba win: 6[0m
+[0;32mI (1193) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1193) wifi_init: udp mbox: 6[0m
+[0;32mI (1193) wifi_init: tcp mbox: 6[0m
+[0;32mI (1203) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1203) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1213) wifi_init: tcp mss: 1440[0m
+[0;32mI (1213) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1223) wifi_init: WiFi RX IRAM OP enabled[0m
+V (1223) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (1233) nvs: nvs_get opmode 1[0m
+V (1233) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+D (1233) wifi:clear blacklist
+D (1243) nvs: nvs_get_str_or_blob sta.ssid[0m
+D (1243) nvs: nvs_get sta.pmf_e 1[0m
+V (1243) esp_adapter: thread sem get: sem=0x3fc9ff98[0m
+[0;32mI (1253) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+D (1263) phy_init: loading PHY init data from application binary[0m
+D (1263) nvs: nvs_open_from_partition phy 0[0m
+D (1273) nvs: nvs_get cal_version 4[0m
+V (1273) phy_init: phy_get_rf_cal_version: 970
+[0m
+D (1273) nvs: nvs_get_str_or_blob cal_mac[0m
+D (1283) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1293) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1293) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (1303) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (1313) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (1313) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+D (1323) nvs: nvs_get_str_or_blob cal_data[0m
+D (1333) nvs: nvs_close 3[0m
+D (1333) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit[0m
+D (1333) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit[0m
+D (1343) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit[0m
+D (1353) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit[0m
+D (1363) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit[0m
+D (1363) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit[0m
+V (1413) wifi:ht20 freq=2412, chan=1
+D (1413) wifi:filter: set rx policy=0
+I (1413) wifi:mode : sta (c0:4e:30:a6:14:80)
+I (1413) wifi:enable tsf
+D (1413) wifi:filter: set rx policy=1
+D (1413) wifi:connect status 0 -> 0
+D (1423) event: running post WIFI_EVENT:2 with handler 0x4201485c and context 0x3fc9d698 on loop 0x3fc9c51c[0m
+D (1423) wifi_init_default: wifi_start esp-netif:0x3fc9d444 event-id2[0m
+D (1433) wifi_init_default: WIFI mac address: c0 4e 30 a6 14 80[0m
+V (1443) esp_adapter: thread sem create: sem=0x3fca5c38[0m
+V (1443) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (1453) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42010a6c
+[0m
+D (1453) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (1463) esp_netif_handlers: esp_netif action has started with netif0x3fc9d444 from event_id=2[0m
+D (1473) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x420114e0
+[0m
+D (1473) esp_netif_lwip: esp_netif_start_api 0x3fc9d444[0m
+D (1483) esp_netif_lwip: esp_netif_get_hostname esp_netif:0x3fc9d444[0m
+D (1493) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (1493) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (1503) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+D (1513) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (1513) event: running post WIFI_EVENT:2 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (1523) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (1533) wifi:Start wifi connect
+D (1533) wifi:connect status 0 -> 0
+D (1533) wifi:connect chan=0
+V (1543) wifi:nvs=0, ssid=badSSID, channel=6
+V (1543) wifi:ssid=badSSID match nvs 0, channel=6
+D (1543) wifi:first chan=6
+D (1553) wifi:connect status 0 -> 1
+D (1553) wifi:filter: set rx policy=3
+D (1553) wifi:clear scan ap list
+D (1563) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=1583719, index=0
+V (1573) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (1573) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (1583) wifi:change: chan<6,0>, dur<0,120>
+V (1583) wifi:ht20 freq=2437, chan=6
+V (1583) wifi:enter start op, arg=0x3fc94728
+V (1593) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (1593) wifi:scan specific ssid=badSSID
+V (1603) wifi:start max timer
+[0;32mI (1603) wifi station: wifi_init_sta finished.[0m
+D (1723) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (1723) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (1723) wifi:change: chan<1,0>, dur<0,120>
+V (1723) wifi:ht20 freq=2412, chan=1
+V (1733) wifi:enter start op, arg=0x3fc94728
+V (1733) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (1743) wifi:scan specific ssid=badSSID
+V (1743) wifi:start max timer
+D (1863) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (1873) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (1873) wifi:change: chan<2,0>, dur<0,120>
+V (1873) wifi:ht20 freq=2417, chan=2
+V (1873) wifi:enter start op, arg=0x3fc94728
+V (1883) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (1883) wifi:scan specific ssid=badSSID
+V (1893) wifi:start max timer
+D (2013) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (2013) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (2013) wifi:change: chan<3,0>, dur<0,120>
+V (2013) wifi:ht20 freq=2422, chan=3
+V (2023) wifi:enter start op, arg=0x3fc94728
+V (2023) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (2033) wifi:scan specific ssid=badSSID
+V (2033) wifi:start max timer
+D (2153) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (2153) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (2153) wifi:change: chan<4,0>, dur<0,120>
+V (2163) wifi:ht20 freq=2427, chan=4
+V (2163) wifi:enter start op, arg=0x3fc94728
+V (2163) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (2173) wifi:scan specific ssid=badSSID
+V (2173) wifi:start max timer
+D (2303) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (2303) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (2303) wifi:change: chan<5,0>, dur<0,120>
+V (2303) wifi:ht20 freq=2432, chan=5
+V (2303) wifi:enter start op, arg=0x3fc94728
+V (2313) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (2323) wifi:scan specific ssid=badSSID
+V (2323) wifi:start max timer
+D (2443) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (2443) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (2443) wifi:change: chan<7,0>, dur<0,120>
+V (2453) wifi:ht20 freq=2442, chan=7
+V (2453) wifi:enter start op, arg=0x3fc94728
+V (2453) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (2463) wifi:scan specific ssid=badSSID
+V (2463) wifi:start max timer
+D (2593) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (2593) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (2593) wifi:change: chan<8,0>, dur<0,120>
+V (2593) wifi:ht20 freq=2447, chan=8
+V (2593) wifi:enter start op, arg=0x3fc94728
+V (2603) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (2603) wifi:scan specific ssid=badSSID
+V (2613) wifi:start max timer
+D (2733) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (2733) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (2733) wifi:change: chan<9,0>, dur<0,120>
+V (2733) wifi:ht20 freq=2452, chan=9
+V (2743) wifi:enter start op, arg=0x3fc94728
+V (2743) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (2753) wifi:scan specific ssid=badSSID
+V (2753) wifi:start max timer
+D (2873) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (2873) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (2883) wifi:change: chan<10,0>, dur<0,120>
+V (2883) wifi:ht20 freq=2457, chan=10
+V (2883) wifi:enter start op, arg=0x3fc94728
+V (2893) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (2893) wifi:scan specific ssid=badSSID
+V (2903) wifi:start max timer
+D (3023) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (3023) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (3023) wifi:change: chan<11,0>, dur<0,120>
+V (3023) wifi:ht20 freq=2462, chan=11
+V (3033) wifi:enter start op, arg=0x3fc94728
+V (3033) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (3043) wifi:scan specific ssid=badSSID
+V (3043) wifi:start max timer
+D (3163) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (3163) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (3163) wifi:change: chan<12,0>, dur<360,360>
+V (3173) wifi:ht20 freq=2467, chan=12
+V (3173) wifi:enter start op, arg=0x3fc94728
+V (3183) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (3183) wifi:passive scan, listen only
+V (3193) wifi:start max timer
+D (3553) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (3553) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (3553) wifi:change: chan<13,0>, dur<360,360>
+V (3553) wifi:ht20 freq=2472, chan=13
+V (3563) wifi:enter start op, arg=0x3fc94728
+V (3563) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (3573) wifi:passive scan, listen only
+V (3573) wifi:start max timer
+D (3933) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (3933) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (3933) wifi:change: chan<14,0>, dur<360,360>
+V (3943) wifi:ht20 freq=2484, chan=14
+V (3943) wifi:enter start op, arg=0x3fc94728
+V (3943) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (3953) wifi:passive scan, listen only
+V (3963) wifi:start max timer
+D (4323) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (4323) wifi:back home chan=<1,0>, current chan=<14,0>
+V (4323) wifi:ht20 freq=2412, chan=1
+D (4323) wifi:filter: set rx policy=4
+D (4323) wifi:first chan=1
+V (4333) wifi:scan_done: arg=0x0, status=0, cur_time=4353701, scan_id=128, scan state=0
+V (4333) wifi:call scan_done cb, arg=0x0
+D (4343) wifi:handoff_cb: status=0
+D (4343) wifi:clear rc list
+D (4343) wifi:clear blacklist
+D (4353) wifi:Send disconnect event, reason=201
+D (4353) wifi:connect status 1 -> 3
+D (4353) wifi:disable connect timer
+D (4363) wifi:clear scan ap list
+D (4363) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (4373) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (4383) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (4383) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (4393) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (4403) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (4413) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (4413) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (4423) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (4433) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (4433) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (4443) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (4443) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (4453) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (4463) wifi:Start wifi connect
+D (4463) wifi:connect status 3 -> 0
+D (4463) wifi:connect chan=0
+V (4473) wifi:nvs=0, ssid=badSSID, channel=6
+V (4473) wifi:ssid=badSSID match nvs 0, channel=6
+D (4483) wifi:first chan=6
+D (4483) wifi:connect status 0 -> 1
+D (4483) wifi:filter: set rx policy=3
+D (4483) wifi:clear scan ap list
+D (4493) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=4515582, index=0
+V (4503) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (4503) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (4513) wifi:change: chan<6,0>, dur<0,120>
+V (4513) wifi:ht20 freq=2437, chan=6
+V (4523) wifi:enter start op, arg=0x3fc94728
+V (4523) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (4533) wifi:scan specific ssid=badSSID
+V (4533) wifi:start max timer
+[0;32mI (4533) wifi station: retry to connect to the AP[0m
+[0;32mI (4543) wifi station: connect to the AP fail[0m
+D (4653) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (4653) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (4653) wifi:change: chan<1,0>, dur<0,120>
+V (4663) wifi:ht20 freq=2412, chan=1
+V (4663) wifi:enter start op, arg=0x3fc94728
+V (4663) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (4673) wifi:scan specific ssid=badSSID
+V (4673) wifi:start max timer
+D (4803) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (4803) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (4803) wifi:change: chan<2,0>, dur<0,120>
+V (4803) wifi:ht20 freq=2417, chan=2
+V (4803) wifi:enter start op, arg=0x3fc94728
+V (4813) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (4813) wifi:scan specific ssid=badSSID
+V (4823) wifi:start max timer
+D (4943) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (4943) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (4943) wifi:change: chan<3,0>, dur<0,120>
+V (4943) wifi:ht20 freq=2422, chan=3
+V (4953) wifi:enter start op, arg=0x3fc94728
+V (4953) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (4963) wifi:scan specific ssid=badSSID
+V (4963) wifi:start max timer
+D (5093) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5093) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (5093) wifi:change: chan<4,0>, dur<0,120>
+V (5093) wifi:ht20 freq=2427, chan=4
+V (5093) wifi:enter start op, arg=0x3fc94728
+V (5103) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (5103) wifi:scan specific ssid=badSSID
+V (5113) wifi:start max timer
+D (5233) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5233) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (5233) wifi:change: chan<5,0>, dur<0,120>
+V (5233) wifi:ht20 freq=2432, chan=5
+V (5243) wifi:enter start op, arg=0x3fc94728
+V (5243) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (5253) wifi:scan specific ssid=badSSID
+V (5253) wifi:start max timer
+D (5373) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5373) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (5373) wifi:change: chan<7,0>, dur<0,120>
+V (5383) wifi:ht20 freq=2442, chan=7
+V (5383) wifi:enter start op, arg=0x3fc94728
+V (5383) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (5393) wifi:scan specific ssid=badSSID
+V (5403) wifi:start max timer
+D (5523) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5523) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (5523) wifi:change: chan<8,0>, dur<0,120>
+V (5523) wifi:ht20 freq=2447, chan=8
+V (5533) wifi:enter start op, arg=0x3fc94728
+V (5533) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (5543) wifi:scan specific ssid=badSSID
+V (5543) wifi:start max timer
+D (5663) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5663) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (5663) wifi:change: chan<9,0>, dur<0,120>
+V (5673) wifi:ht20 freq=2452, chan=9
+V (5673) wifi:enter start op, arg=0x3fc94728
+V (5673) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (5683) wifi:scan specific ssid=badSSID
+V (5683) wifi:start max timer
+D (5813) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5813) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (5813) wifi:change: chan<10,0>, dur<0,120>
+V (5813) wifi:ht20 freq=2457, chan=10
+V (5813) wifi:enter start op, arg=0x3fc94728
+V (5823) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (5823) wifi:scan specific ssid=badSSID
+V (5833) wifi:start max timer
+D (5953) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (5953) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (5953) wifi:change: chan<11,0>, dur<0,120>
+V (5953) wifi:ht20 freq=2462, chan=11
+V (5963) wifi:enter start op, arg=0x3fc94728
+V (5963) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (5973) wifi:scan specific ssid=badSSID
+V (5973) wifi:start max timer
+D (6103) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6103) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (6103) wifi:change: chan<12,0>, dur<360,360>
+V (6103) wifi:ht20 freq=2467, chan=12
+V (6103) wifi:enter start op, arg=0x3fc94728
+V (6113) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (6113) wifi:passive scan, listen only
+V (6123) wifi:start max timer
+D (6483) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6483) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (6483) wifi:change: chan<13,0>, dur<360,360>
+V (6483) wifi:ht20 freq=2472, chan=13
+V (6493) wifi:enter start op, arg=0x3fc94728
+V (6493) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (6503) wifi:passive scan, listen only
+V (6503) wifi:start max timer
+D (6863) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (6863) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (6873) wifi:change: chan<14,0>, dur<360,360>
+V (6873) wifi:ht20 freq=2484, chan=14
+V (6873) wifi:enter start op, arg=0x3fc94728
+V (6883) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (6883) wifi:passive scan, listen only
+V (6893) wifi:start max timer
+D (7253) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (7253) wifi:back home chan=<1,0>, current chan=<14,0>
+V (7253) wifi:ht20 freq=2412, chan=1
+D (7253) wifi:filter: set rx policy=4
+D (7253) wifi:first chan=1
+V (7263) wifi:scan_done: arg=0x0, status=0, cur_time=7285177, scan_id=128, scan state=0
+V (7273) wifi:call scan_done cb, arg=0x0
+D (7273) wifi:handoff_cb: status=0
+D (7273) wifi:clear rc list
+D (7273) wifi:clear blacklist
+D (7283) wifi:Send disconnect event, reason=201
+D (7283) wifi:connect status 1 -> 3
+D (7283) wifi:disable connect timer
+D (7293) wifi:clear scan ap list
+D (7293) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (7303) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (7313) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (7323) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (7323) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (7333) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (7343) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (7353) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (7353) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (7363) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (7363) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (7373) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (7383) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (7393) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (7393) wifi:Start wifi connect
+D (7393) wifi:connect status 3 -> 0
+D (7403) wifi:connect chan=0
+V (7403) wifi:nvs=0, ssid=badSSID, channel=6
+V (7403) wifi:ssid=badSSID match nvs 0, channel=6
+D (7413) wifi:first chan=6
+D (7413) wifi:connect status 0 -> 1
+D (7413) wifi:filter: set rx policy=3
+D (7423) wifi:clear scan ap list
+D (7423) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=7447060, index=0
+V (7433) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (7433) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (7443) wifi:change: chan<6,0>, dur<0,120>
+V (7443) wifi:ht20 freq=2437, chan=6
+V (7453) wifi:enter start op, arg=0x3fc94728
+V (7453) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (7463) wifi:scan specific ssid=badSSID
+V (7463) wifi:start max timer
+[0;32mI (7463) wifi station: retry to connect to the AP[0m
+[0;32mI (7473) wifi station: connect to the AP fail[0m
+D (7583) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7583) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (7583) wifi:change: chan<1,0>, dur<0,120>
+V (7593) wifi:ht20 freq=2412, chan=1
+V (7593) wifi:enter start op, arg=0x3fc94728
+V (7593) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (7603) wifi:scan specific ssid=badSSID
+V (7613) wifi:start max timer
+D (7733) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7733) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (7733) wifi:change: chan<2,0>, dur<0,120>
+V (7733) wifi:ht20 freq=2417, chan=2
+V (7743) wifi:enter start op, arg=0x3fc94728
+V (7743) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (7753) wifi:scan specific ssid=badSSID
+V (7753) wifi:start max timer
+D (7873) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (7873) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (7873) wifi:change: chan<3,0>, dur<0,120>
+V (7883) wifi:ht20 freq=2422, chan=3
+V (7883) wifi:enter start op, arg=0x3fc94728
+V (7883) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (7893) wifi:scan specific ssid=badSSID
+V (7893) wifi:start max timer
+D (8023) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (8023) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (8023) wifi:change: chan<4,0>, dur<0,120>
+V (8023) wifi:ht20 freq=2427, chan=4
+V (8023) wifi:enter start op, arg=0x3fc94728
+V (8033) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (8033) wifi:scan specific ssid=badSSID
+V (8043) wifi:start max timer
+D (8163) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (8163) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (8163) wifi:change: chan<5,0>, dur<0,120>
+V (8163) wifi:ht20 freq=2432, chan=5
+V (8173) wifi:enter start op, arg=0x3fc94728
+V (8173) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (8183) wifi:scan specific ssid=badSSID
+V (8183) wifi:start max timer
+D (8303) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (8313) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (8313) wifi:change: chan<7,0>, dur<0,120>
+V (8313) wifi:ht20 freq=2442, chan=7
+V (8313) wifi:enter start op, arg=0x3fc94728
+V (8323) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (8323) wifi:scan specific ssid=badSSID
+V (8333) wifi:start max timer
+D (8453) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (8453) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (8453) wifi:change: chan<8,0>, dur<0,120>
+V (8453) wifi:ht20 freq=2447, chan=8
+V (8463) wifi:enter start op, arg=0x3fc94728
+V (8463) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (8473) wifi:scan specific ssid=badSSID
+V (8473) wifi:start max timer
+D (8593) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (8593) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (8593) wifi:change: chan<9,0>, dur<0,120>
+V (8603) wifi:ht20 freq=2452, chan=9
+V (8603) wifi:enter start op, arg=0x3fc94728
+V (8603) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (8613) wifi:scan specific ssid=badSSID
+V (8613) wifi:start max timer
+D (8743) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (8743) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (8743) wifi:change: chan<10,0>, dur<0,120>
+V (8743) wifi:ht20 freq=2457, chan=10
+V (8753) wifi:enter start op, arg=0x3fc94728
+V (8753) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (8763) wifi:scan specific ssid=badSSID
+V (8763) wifi:start max timer
+D (8883) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (8883) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (8883) wifi:change: chan<11,0>, dur<0,120>
+V (8893) wifi:ht20 freq=2462, chan=11
+V (8893) wifi:enter start op, arg=0x3fc94728
+V (8893) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (8903) wifi:scan specific ssid=badSSID
+V (8903) wifi:start max timer
+D (9033) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (9033) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (9033) wifi:change: chan<12,0>, dur<360,360>
+V (9033) wifi:ht20 freq=2467, chan=12
+V (9033) wifi:enter start op, arg=0x3fc94728
+V (9043) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (9053) wifi:passive scan, listen only
+V (9053) wifi:start max timer
+D (9413) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (9413) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (9413) wifi:change: chan<13,0>, dur<360,360>
+V (9423) wifi:ht20 freq=2472, chan=13
+V (9423) wifi:enter start op, arg=0x3fc94728
+V (9423) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (9433) wifi:passive scan, listen only
+V (9433) wifi:start max timer
+D (9803) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (9803) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (9803) wifi:change: chan<14,0>, dur<360,360>
+V (9803) wifi:ht20 freq=2484, chan=14
+V (9803) wifi:enter start op, arg=0x3fc94728
+V (9813) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (9813) wifi:passive scan, listen only
+V (9823) wifi:start max timer
+D (10183) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (10183) wifi:back home chan=<1,0>, current chan=<14,0>
+V (10183) wifi:ht20 freq=2412, chan=1
+D (10183) wifi:filter: set rx policy=4
+D (10193) wifi:first chan=1
+V (10193) wifi:scan_done: arg=0x0, status=0, cur_time=10217353, scan_id=128, scan state=0
+V (10203) wifi:call scan_done cb, arg=0x0
+D (10203) wifi:handoff_cb: status=0
+D (10203) wifi:clear rc list
+D (10213) wifi:clear blacklist
+D (10213) wifi:Send disconnect event, reason=201
+D (10213) wifi:connect status 1 -> 3
+D (10223) wifi:disable connect timer
+D (10223) wifi:clear scan ap list
+D (10223) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (10233) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (10243) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (10253) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (10263) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (10263) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (10273) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (10283) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (10293) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (10293) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (10303) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (10303) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (10313) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (10323) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (10323) wifi:Start wifi connect
+D (10333) wifi:connect status 3 -> 0
+D (10333) wifi:connect chan=0
+V (10333) wifi:nvs=0, ssid=badSSID, channel=6
+V (10343) wifi:ssid=badSSID match nvs 0, channel=6
+D (10343) wifi:first chan=6
+D (10343) wifi:connect status 0 -> 1
+D (10353) wifi:filter: set rx policy=3
+D (10353) wifi:clear scan ap list
+D (10353) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=10382103, index=0
+V (10363) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (10373) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (10383) wifi:change: chan<6,0>, dur<0,120>
+V (10383) wifi:ht20 freq=2437, chan=6
+V (10383) wifi:enter start op, arg=0x3fc94728
+V (10393) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (10393) wifi:scan specific ssid=badSSID
+V (10403) wifi:start max timer
+[0;32mI (10403) wifi station: retry to connect to the AP[0m
+[0;32mI (10413) wifi station: connect to the AP fail[0m
+D (10523) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (10523) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (10523) wifi:change: chan<1,0>, dur<0,120>
+V (10523) wifi:ht20 freq=2412, chan=1
+V (10533) wifi:enter start op, arg=0x3fc94728
+V (10533) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (10543) wifi:scan specific ssid=badSSID
+V (10543) wifi:start max timer
+D (10663) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (10673) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (10673) wifi:change: chan<2,0>, dur<0,120>
+V (10673) wifi:ht20 freq=2417, chan=2
+V (10673) wifi:enter start op, arg=0x3fc94728
+V (10683) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (10683) wifi:scan specific ssid=badSSID
+V (10693) wifi:start max timer
+D (10813) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (10813) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (10813) wifi:change: chan<3,0>, dur<0,120>
+V (10813) wifi:ht20 freq=2422, chan=3
+V (10823) wifi:enter start op, arg=0x3fc94728
+V (10823) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (10833) wifi:scan specific ssid=badSSID
+V (10833) wifi:start max timer
+D (10953) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (10963) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (10963) wifi:change: chan<4,0>, dur<0,120>
+V (10963) wifi:ht20 freq=2427, chan=4
+V (10963) wifi:enter start op, arg=0x3fc94728
+V (10973) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (10973) wifi:scan specific ssid=badSSID
+V (10983) wifi:start max timer
+D (11103) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (11103) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (11103) wifi:change: chan<5,0>, dur<0,120>
+V (11103) wifi:ht20 freq=2432, chan=5
+V (11113) wifi:enter start op, arg=0x3fc94728
+V (11113) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (11123) wifi:scan specific ssid=badSSID
+V (11123) wifi:start max timer
+D (11243) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (11253) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (11253) wifi:change: chan<7,0>, dur<0,120>
+V (11253) wifi:ht20 freq=2442, chan=7
+V (11253) wifi:enter start op, arg=0x3fc94728
+V (11263) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (11263) wifi:scan specific ssid=badSSID
+V (11273) wifi:start max timer
+D (11393) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (11393) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (11393) wifi:change: chan<8,0>, dur<0,120>
+V (11393) wifi:ht20 freq=2447, chan=8
+V (11403) wifi:enter start op, arg=0x3fc94728
+V (11403) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (11413) wifi:scan specific ssid=badSSID
+V (11413) wifi:start max timer
+D (11533) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (11533) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (11543) wifi:change: chan<9,0>, dur<0,120>
+V (11543) wifi:ht20 freq=2452, chan=9
+V (11543) wifi:enter start op, arg=0x3fc94728
+V (11553) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (11553) wifi:scan specific ssid=badSSID
+V (11563) wifi:start max timer
+D (11683) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (11683) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (11683) wifi:change: chan<10,0>, dur<0,120>
+V (11683) wifi:ht20 freq=2457, chan=10
+V (11693) wifi:enter start op, arg=0x3fc94728
+V (11693) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (11703) wifi:scan specific ssid=badSSID
+V (11703) wifi:start max timer
+D (11823) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (11833) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (11833) wifi:change: chan<11,0>, dur<0,120>
+V (11833) wifi:ht20 freq=2462, chan=11
+V (11833) wifi:enter start op, arg=0x3fc94728
+V (11843) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (11843) wifi:scan specific ssid=badSSID
+V (11853) wifi:start max timer
+D (11973) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (11973) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (11973) wifi:change: chan<12,0>, dur<360,360>
+V (11973) wifi:ht20 freq=2467, chan=12
+V (11983) wifi:enter start op, arg=0x3fc94728
+V (11983) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (11993) wifi:passive scan, listen only
+V (11993) wifi:start max timer
+D (12363) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (12363) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (12363) wifi:change: chan<13,0>, dur<360,360>
+V (12363) wifi:ht20 freq=2472, chan=13
+V (12363) wifi:enter start op, arg=0x3fc94728
+V (12373) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (12373) wifi:passive scan, listen only
+V (12383) wifi:start max timer
+D (12743) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (12743) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (12743) wifi:change: chan<14,0>, dur<360,360>
+V (12753) wifi:ht20 freq=2484, chan=14
+V (12753) wifi:enter start op, arg=0x3fc94728
+V (12753) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (12763) wifi:passive scan, listen only
+V (12763) wifi:start max timer
+D (13133) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (13133) wifi:back home chan=<1,0>, current chan=<14,0>
+V (13133) wifi:ht20 freq=2412, chan=1
+D (13133) wifi:filter: set rx policy=4
+D (13133) wifi:first chan=1
+V (13133) wifi:scan_done: arg=0x0, status=0, cur_time=13162485, scan_id=128, scan state=0
+V (13143) wifi:call scan_done cb, arg=0x0
+D (13153) wifi:handoff_cb: status=0
+D (13153) wifi:clear rc list
+D (13153) wifi:clear blacklist
+D (13153) wifi:Send disconnect event, reason=201
+D (13163) wifi:connect status 1 -> 3
+D (13163) wifi:disable connect timer
+D (13173) wifi:clear scan ap list
+D (13173) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (13183) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (13193) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (13193) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (13203) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (13213) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (13223) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (13223) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (13233) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (13243) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (13243) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (13253) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (13253) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (13263) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (13273) wifi:Start wifi connect
+D (13273) wifi:connect status 3 -> 0
+D (13283) wifi:connect chan=0
+V (13283) wifi:nvs=0, ssid=badSSID, channel=6
+V (13283) wifi:ssid=badSSID match nvs 0, channel=6
+D (13293) wifi:first chan=6
+D (13293) wifi:connect status 0 -> 1
+D (13293) wifi:filter: set rx policy=3
+D (13303) wifi:clear scan ap list
+D (13303) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=13327229, index=0
+V (13313) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (13313) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (13323) wifi:change: chan<6,0>, dur<0,120>
+V (13323) wifi:ht20 freq=2437, chan=6
+V (13333) wifi:enter start op, arg=0x3fc94728
+V (13333) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (13343) wifi:scan specific ssid=badSSID
+V (13343) wifi:start max timer
+[0;32mI (13353) wifi station: retry to connect to the AP[0m
+[0;32mI (13353) wifi station: connect to the AP fail[0m
+D (13473) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13473) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (13473) wifi:change: chan<1,0>, dur<0,120>
+V (13473) wifi:ht20 freq=2412, chan=1
+V (13473) wifi:enter start op, arg=0x3fc94728
+V (13483) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (13483) wifi:scan specific ssid=badSSID
+V (13493) wifi:start max timer
+D (13613) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13613) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (13613) wifi:change: chan<2,0>, dur<0,120>
+V (13613) wifi:ht20 freq=2417, chan=2
+V (13623) wifi:enter start op, arg=0x3fc94728
+V (13623) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (13633) wifi:scan specific ssid=badSSID
+V (13633) wifi:start max timer
+D (13753) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13763) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (13763) wifi:change: chan<3,0>, dur<0,120>
+V (13763) wifi:ht20 freq=2422, chan=3
+V (13763) wifi:enter start op, arg=0x3fc94728
+V (13773) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (13773) wifi:scan specific ssid=badSSID
+V (13783) wifi:start max timer
+D (13903) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (13903) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (13903) wifi:change: chan<4,0>, dur<0,120>
+V (13903) wifi:ht20 freq=2427, chan=4
+V (13913) wifi:enter start op, arg=0x3fc94728
+V (13913) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (13923) wifi:scan specific ssid=badSSID
+V (13923) wifi:start max timer
+D (14043) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14053) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (14053) wifi:change: chan<5,0>, dur<0,120>
+V (14053) wifi:ht20 freq=2432, chan=5
+V (14053) wifi:enter start op, arg=0x3fc94728
+V (14063) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (14063) wifi:scan specific ssid=badSSID
+V (14073) wifi:start max timer
+D (14193) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14193) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (14193) wifi:change: chan<7,0>, dur<0,120>
+V (14193) wifi:ht20 freq=2442, chan=7
+V (14203) wifi:enter start op, arg=0x3fc94728
+V (14203) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (14213) wifi:scan specific ssid=badSSID
+V (14213) wifi:start max timer
+D (14333) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14333) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (14343) wifi:change: chan<8,0>, dur<0,120>
+V (14343) wifi:ht20 freq=2447, chan=8
+V (14343) wifi:enter start op, arg=0x3fc94728
+V (14353) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (14353) wifi:scan specific ssid=badSSID
+V (14363) wifi:start max timer
+D (14483) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14483) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (14483) wifi:change: chan<9,0>, dur<0,120>
+V (14483) wifi:ht20 freq=2452, chan=9
+V (14493) wifi:enter start op, arg=0x3fc94728
+V (14493) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (14503) wifi:scan specific ssid=badSSID
+V (14503) wifi:start max timer
+D (14623) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14623) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (14623) wifi:change: chan<10,0>, dur<0,120>
+V (14633) wifi:ht20 freq=2457, chan=10
+V (14633) wifi:enter start op, arg=0x3fc94728
+V (14643) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (14643) wifi:scan specific ssid=badSSID
+V (14653) wifi:start max timer
+D (14773) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14773) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (14773) wifi:change: chan<11,0>, dur<0,120>
+V (14773) wifi:ht20 freq=2462, chan=11
+V (14783) wifi:enter start op, arg=0x3fc94728
+V (14783) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (14793) wifi:scan specific ssid=badSSID
+V (14793) wifi:start max timer
+D (14913) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (14923) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (14923) wifi:change: chan<12,0>, dur<360,360>
+V (14923) wifi:ht20 freq=2467, chan=12
+V (14923) wifi:enter start op, arg=0x3fc94728
+V (14933) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (14933) wifi:passive scan, listen only
+V (14943) wifi:start max timer
+D (15303) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (15303) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (15303) wifi:change: chan<13,0>, dur<360,360>
+V (15303) wifi:ht20 freq=2472, chan=13
+V (15313) wifi:enter start op, arg=0x3fc94728
+V (15313) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (15323) wifi:passive scan, listen only
+V (15323) wifi:start max timer
+D (15693) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (15693) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (15693) wifi:change: chan<14,0>, dur<360,360>
+V (15693) wifi:ht20 freq=2484, chan=14
+V (15693) wifi:enter start op, arg=0x3fc94728
+V (15703) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (15703) wifi:passive scan, listen only
+V (15713) wifi:start max timer
+D (16073) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (16073) wifi:back home chan=<1,0>, current chan=<14,0>
+V (16073) wifi:ht20 freq=2412, chan=1
+D (16073) wifi:filter: set rx policy=4
+D (16083) wifi:first chan=1
+V (16083) wifi:scan_done: arg=0x0, status=0, cur_time=16107196, scan_id=128, scan state=0
+V (16093) wifi:call scan_done cb, arg=0x0
+D (16093) wifi:handoff_cb: status=0
+D (16093) wifi:clear rc list
+D (16103) wifi:clear blacklist
+D (16103) wifi:Send disconnect event, reason=201
+D (16103) wifi:connect status 1 -> 3
+D (16113) wifi:disable connect timer
+D (16113) wifi:clear scan ap list
+D (16113) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (16123) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (16133) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (16143) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (16153) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (16153) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (16163) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (16173) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (16183) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (16183) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (16193) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (16193) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (16203) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (16213) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (16213) wifi:Start wifi connect
+D (16223) wifi:connect status 3 -> 0
+D (16223) wifi:connect chan=0
+V (16223) wifi:nvs=0, ssid=badSSID, channel=6
+V (16233) wifi:ssid=badSSID match nvs 0, channel=6
+D (16233) wifi:first chan=6
+D (16233) wifi:connect status 0 -> 1
+D (16243) wifi:filter: set rx policy=3
+D (16243) wifi:clear scan ap list
+D (16243) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=16271943, index=0
+V (16253) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (16263) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (16273) wifi:change: chan<6,0>, dur<0,120>
+V (16273) wifi:ht20 freq=2437, chan=6
+V (16273) wifi:enter start op, arg=0x3fc94728
+V (16283) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (16283) wifi:scan specific ssid=badSSID
+V (16293) wifi:start max timer
+[0;32mI (16293) wifi station: retry to connect to the AP[0m
+[0;32mI (16303) wifi station: connect to the AP fail[0m
+D (16413) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (16413) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (16413) wifi:change: chan<1,0>, dur<0,120>
+V (16413) wifi:ht20 freq=2412, chan=1
+V (16423) wifi:enter start op, arg=0x3fc94728
+V (16423) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (16433) wifi:scan specific ssid=badSSID
+V (16433) wifi:start max timer
+D (16553) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (16563) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (16563) wifi:change: chan<2,0>, dur<0,120>
+V (16563) wifi:ht20 freq=2417, chan=2
+V (16563) wifi:enter start op, arg=0x3fc94728
+V (16573) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (16573) wifi:scan specific ssid=badSSID
+V (16583) wifi:start max timer
+D (16703) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (16703) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (16703) wifi:change: chan<3,0>, dur<0,120>
+V (16703) wifi:ht20 freq=2422, chan=3
+V (16713) wifi:enter start op, arg=0x3fc94728
+V (16713) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (16723) wifi:scan specific ssid=badSSID
+V (16723) wifi:start max timer
+D (16843) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (16843) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (16853) wifi:change: chan<4,0>, dur<0,120>
+V (16853) wifi:ht20 freq=2427, chan=4
+V (16853) wifi:enter start op, arg=0x3fc94728
+V (16863) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (16863) wifi:scan specific ssid=badSSID
+V (16873) wifi:start max timer
+D (16993) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (16993) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (16993) wifi:change: chan<5,0>, dur<0,120>
+V (16993) wifi:ht20 freq=2432, chan=5
+V (17003) wifi:enter start op, arg=0x3fc94728
+V (17003) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (17013) wifi:scan specific ssid=badSSID
+V (17013) wifi:start max timer
+D (17133) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (17133) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (17133) wifi:change: chan<7,0>, dur<0,120>
+V (17143) wifi:ht20 freq=2442, chan=7
+V (17143) wifi:enter start op, arg=0x3fc94728
+V (17153) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (17153) wifi:scan specific ssid=badSSID
+V (17163) wifi:start max timer
+D (17283) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (17283) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (17283) wifi:change: chan<8,0>, dur<0,120>
+V (17283) wifi:ht20 freq=2447, chan=8
+V (17293) wifi:enter start op, arg=0x3fc94728
+V (17293) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (17303) wifi:scan specific ssid=badSSID
+V (17303) wifi:start max timer
+D (17423) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (17423) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (17423) wifi:change: chan<9,0>, dur<0,120>
+V (17433) wifi:ht20 freq=2452, chan=9
+V (17433) wifi:enter start op, arg=0x3fc94728
+V (17443) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (17443) wifi:scan specific ssid=badSSID
+V (17453) wifi:start max timer
+D (17573) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (17573) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (17573) wifi:change: chan<10,0>, dur<0,120>
+V (17573) wifi:ht20 freq=2457, chan=10
+V (17583) wifi:enter start op, arg=0x3fc94728
+V (17583) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (17593) wifi:scan specific ssid=badSSID
+V (17593) wifi:start max timer
+D (17713) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (17713) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (17713) wifi:change: chan<11,0>, dur<0,120>
+V (17723) wifi:ht20 freq=2462, chan=11
+V (17723) wifi:enter start op, arg=0x3fc94728
+V (17733) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (17733) wifi:scan specific ssid=badSSID
+V (17743) wifi:start max timer
+D (17863) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (17863) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (17863) wifi:change: chan<12,0>, dur<360,360>
+V (17863) wifi:ht20 freq=2467, chan=12
+V (17873) wifi:enter start op, arg=0x3fc94728
+V (17873) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (17883) wifi:passive scan, listen only
+V (17883) wifi:start max timer
+D (18243) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (18253) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (18253) wifi:change: chan<13,0>, dur<360,360>
+V (18253) wifi:ht20 freq=2472, chan=13
+V (18253) wifi:enter start op, arg=0x3fc94728
+V (18263) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (18263) wifi:passive scan, listen only
+V (18273) wifi:start max timer
+D (18633) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (18633) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (18633) wifi:change: chan<14,0>, dur<360,360>
+V (18633) wifi:ht20 freq=2484, chan=14
+V (18643) wifi:enter start op, arg=0x3fc94728
+V (18643) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (18653) wifi:passive scan, listen only
+V (18653) wifi:start max timer
+D (19023) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (19023) wifi:back home chan=<1,0>, current chan=<14,0>
+V (19023) wifi:ht20 freq=2412, chan=1
+D (19023) wifi:filter: set rx policy=4
+D (19023) wifi:first chan=1
+V (19023) wifi:scan_done: arg=0x0, status=0, cur_time=19051884, scan_id=128, scan state=0
+V (19033) wifi:call scan_done cb, arg=0x0
+D (19043) wifi:handoff_cb: status=0
+D (19043) wifi:clear rc list
+D (19043) wifi:clear blacklist
+D (19043) wifi:Send disconnect event, reason=201
+D (19053) wifi:connect status 1 -> 3
+D (19053) wifi:disable connect timer
+D (19063) wifi:clear scan ap list
+D (19063) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (19073) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (19083) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (19083) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (19093) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (19103) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (19113) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (19113) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (19123) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (19133) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (19133) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (19143) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (19143) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (19153) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (19163) wifi:Start wifi connect
+D (19163) wifi:connect status 3 -> 0
+D (19173) wifi:connect chan=0
+V (19173) wifi:nvs=0, ssid=badSSID, channel=6
+V (19173) wifi:ssid=badSSID match nvs 0, channel=6
+D (19183) wifi:first chan=6
+D (19183) wifi:connect status 0 -> 1
+D (19183) wifi:filter: set rx policy=3
+D (19193) wifi:clear scan ap list
+D (19193) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=19216632, index=0
+V (19203) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (19203) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (19213) wifi:change: chan<6,0>, dur<0,120>
+V (19213) wifi:ht20 freq=2437, chan=6
+V (19223) wifi:enter start op, arg=0x3fc94728
+V (19223) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (19233) wifi:scan specific ssid=badSSID
+V (19233) wifi:start max timer
+[0;32mI (19233) wifi station: retry to connect to the AP[0m
+[0;32mI (19243) wifi station: connect to the AP fail[0m
+D (19353) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19353) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (19363) wifi:change: chan<1,0>, dur<0,120>
+V (19363) wifi:ht20 freq=2412, chan=1
+V (19363) wifi:enter start op, arg=0x3fc94728
+V (19373) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (19373) wifi:scan specific ssid=badSSID
+V (19383) wifi:start max timer
+D (19503) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19503) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (19503) wifi:change: chan<2,0>, dur<0,120>
+V (19503) wifi:ht20 freq=2417, chan=2
+V (19513) wifi:enter start op, arg=0x3fc94728
+V (19513) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (19523) wifi:scan specific ssid=badSSID
+V (19523) wifi:start max timer
+D (19643) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19643) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (19643) wifi:change: chan<3,0>, dur<0,120>
+V (19653) wifi:ht20 freq=2422, chan=3
+V (19653) wifi:enter start op, arg=0x3fc94728
+V (19663) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (19663) wifi:scan specific ssid=badSSID
+V (19673) wifi:start max timer
+D (19793) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19793) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (19793) wifi:change: chan<4,0>, dur<0,120>
+V (19793) wifi:ht20 freq=2427, chan=4
+V (19803) wifi:enter start op, arg=0x3fc94728
+V (19803) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (19813) wifi:scan specific ssid=badSSID
+V (19813) wifi:start max timer
+D (19933) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (19933) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (19933) wifi:change: chan<5,0>, dur<0,120>
+V (19943) wifi:ht20 freq=2432, chan=5
+V (19943) wifi:enter start op, arg=0x3fc94728
+V (19953) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (19953) wifi:scan specific ssid=badSSID
+V (19963) wifi:start max timer
+D (20083) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20083) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (20083) wifi:change: chan<7,0>, dur<0,120>
+V (20083) wifi:ht20 freq=2442, chan=7
+V (20093) wifi:enter start op, arg=0x3fc94728
+V (20093) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (20103) wifi:scan specific ssid=badSSID
+V (20103) wifi:start max timer
+D (20223) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20223) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (20223) wifi:change: chan<8,0>, dur<0,120>
+V (20233) wifi:ht20 freq=2447, chan=8
+V (20233) wifi:enter start op, arg=0x3fc94728
+V (20243) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (20243) wifi:scan specific ssid=badSSID
+V (20253) wifi:start max timer
+D (20373) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20373) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (20373) wifi:change: chan<9,0>, dur<0,120>
+V (20373) wifi:ht20 freq=2452, chan=9
+V (20383) wifi:enter start op, arg=0x3fc94728
+V (20383) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (20393) wifi:scan specific ssid=badSSID
+V (20393) wifi:start max timer
+D (20513) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20513) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (20513) wifi:change: chan<10,0>, dur<0,120>
+V (20523) wifi:ht20 freq=2457, chan=10
+V (20523) wifi:enter start op, arg=0x3fc94728
+V (20533) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (20533) wifi:scan specific ssid=badSSID
+V (20543) wifi:start max timer
+D (20663) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20663) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (20663) wifi:change: chan<11,0>, dur<0,120>
+V (20663) wifi:ht20 freq=2462, chan=11
+V (20673) wifi:enter start op, arg=0x3fc94728
+V (20673) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (20683) wifi:scan specific ssid=badSSID
+V (20683) wifi:start max timer
+D (20803) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (20803) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (20803) wifi:change: chan<12,0>, dur<360,360>
+V (20813) wifi:ht20 freq=2467, chan=12
+V (20813) wifi:enter start op, arg=0x3fc94728
+V (20823) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (20823) wifi:passive scan, listen only
+V (20833) wifi:start max timer
+D (21193) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (21193) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (21193) wifi:change: chan<13,0>, dur<360,360>
+V (21193) wifi:ht20 freq=2472, chan=13
+V (21203) wifi:enter start op, arg=0x3fc94728
+V (21203) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (21213) wifi:passive scan, listen only
+V (21213) wifi:start max timer
+D (21573) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (21583) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (21583) wifi:change: chan<14,0>, dur<360,360>
+V (21583) wifi:ht20 freq=2484, chan=14
+V (21583) wifi:enter start op, arg=0x3fc94728
+V (21593) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (21593) wifi:passive scan, listen only
+V (21603) wifi:start max timer
+D (21963) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (21963) wifi:back home chan=<1,0>, current chan=<14,0>
+V (21963) wifi:ht20 freq=2412, chan=1
+D (21963) wifi:filter: set rx policy=4
+D (21973) wifi:first chan=1
+V (21973) wifi:scan_done: arg=0x0, status=0, cur_time=21996598, scan_id=128, scan state=0
+V (21983) wifi:call scan_done cb, arg=0x0
+D (21983) wifi:handoff_cb: status=0
+D (21983) wifi:clear rc list
+D (21993) wifi:clear blacklist
+D (21993) wifi:Send disconnect event, reason=201
+D (21993) wifi:connect status 1 -> 3
+D (22003) wifi:disable connect timer
+D (22003) wifi:clear scan ap list
+D (22003) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (22013) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (22023) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (22033) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (22033) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (22043) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (22053) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (22063) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (22073) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (22073) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (22083) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (22083) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (22093) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (22103) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (22103) wifi:Start wifi connect
+D (22113) wifi:connect status 3 -> 0
+D (22113) wifi:connect chan=0
+V (22113) wifi:nvs=0, ssid=badSSID, channel=6
+V (22123) wifi:ssid=badSSID match nvs 0, channel=6
+D (22123) wifi:first chan=6
+D (22123) wifi:connect status 0 -> 1
+D (22133) wifi:filter: set rx policy=3
+D (22133) wifi:clear scan ap list
+D (22133) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=22161347, index=0
+V (22143) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (22153) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (22153) wifi:change: chan<6,0>, dur<0,120>
+V (22163) wifi:ht20 freq=2437, chan=6
+V (22163) wifi:enter start op, arg=0x3fc94728
+V (22173) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (22173) wifi:scan specific ssid=badSSID
+V (22183) wifi:start max timer
+[0;32mI (22183) wifi station: retry to connect to the AP[0m
+[0;32mI (22183) wifi station: connect to the AP fail[0m
+D (22303) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (22303) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (22303) wifi:change: chan<1,0>, dur<0,120>
+V (22303) wifi:ht20 freq=2412, chan=1
+V (22313) wifi:enter start op, arg=0x3fc94728
+V (22313) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (22323) wifi:scan specific ssid=badSSID
+V (22323) wifi:start max timer
+D (22443) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (22443) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (22443) wifi:change: chan<2,0>, dur<0,120>
+V (22453) wifi:ht20 freq=2417, chan=2
+V (22453) wifi:enter start op, arg=0x3fc94728
+V (22463) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (22463) wifi:scan specific ssid=badSSID
+V (22473) wifi:start max timer
+D (22593) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (22593) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (22593) wifi:change: chan<3,0>, dur<0,120>
+V (22593) wifi:ht20 freq=2422, chan=3
+V (22603) wifi:enter start op, arg=0x3fc94728
+V (22603) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (22613) wifi:scan specific ssid=badSSID
+V (22613) wifi:start max timer
+D (22733) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (22733) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (22733) wifi:change: chan<4,0>, dur<0,120>
+V (22743) wifi:ht20 freq=2427, chan=4
+V (22743) wifi:enter start op, arg=0x3fc94728
+V (22753) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (22753) wifi:scan specific ssid=badSSID
+V (22763) wifi:start max timer
+D (22883) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (22883) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (22883) wifi:change: chan<5,0>, dur<0,120>
+V (22883) wifi:ht20 freq=2432, chan=5
+V (22893) wifi:enter start op, arg=0x3fc94728
+V (22893) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (22903) wifi:scan specific ssid=badSSID
+V (22903) wifi:start max timer
+D (23023) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (23023) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (23023) wifi:change: chan<7,0>, dur<0,120>
+V (23033) wifi:ht20 freq=2442, chan=7
+V (23033) wifi:enter start op, arg=0x3fc94728
+V (23043) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (23043) wifi:scan specific ssid=badSSID
+V (23053) wifi:start max timer
+D (23173) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (23173) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (23173) wifi:change: chan<8,0>, dur<0,120>
+V (23173) wifi:ht20 freq=2447, chan=8
+V (23183) wifi:enter start op, arg=0x3fc94728
+V (23183) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (23193) wifi:scan specific ssid=badSSID
+V (23193) wifi:start max timer
+D (23313) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (23313) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (23313) wifi:change: chan<9,0>, dur<0,120>
+V (23323) wifi:ht20 freq=2452, chan=9
+V (23323) wifi:enter start op, arg=0x3fc94728
+V (23323) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (23333) wifi:scan specific ssid=badSSID
+V (23343) wifi:start max timer
+D (23463) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (23463) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (23463) wifi:change: chan<10,0>, dur<0,120>
+V (23463) wifi:ht20 freq=2457, chan=10
+V (23473) wifi:enter start op, arg=0x3fc94728
+V (23473) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (23483) wifi:scan specific ssid=badSSID
+V (23483) wifi:start max timer
+D (23603) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (23603) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (23603) wifi:change: chan<11,0>, dur<0,120>
+V (23613) wifi:ht20 freq=2462, chan=11
+V (23613) wifi:enter start op, arg=0x3fc94728
+V (23623) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (23623) wifi:scan specific ssid=badSSID
+V (23633) wifi:start max timer
+D (23753) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (23753) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (23753) wifi:change: chan<12,0>, dur<360,360>
+V (23753) wifi:ht20 freq=2467, chan=12
+V (23763) wifi:enter start op, arg=0x3fc94728
+V (23763) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (23773) wifi:passive scan, listen only
+V (23773) wifi:start max timer
+D (24133) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (24133) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (24133) wifi:change: chan<13,0>, dur<360,360>
+V (24143) wifi:ht20 freq=2472, chan=13
+V (24143) wifi:enter start op, arg=0x3fc94728
+V (24153) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (24153) wifi:passive scan, listen only
+V (24163) wifi:start max timer
+D (24523) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (24523) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (24523) wifi:change: chan<14,0>, dur<360,360>
+V (24523) wifi:ht20 freq=2484, chan=14
+V (24533) wifi:enter start op, arg=0x3fc94728
+V (24533) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (24543) wifi:passive scan, listen only
+V (24543) wifi:start max timer
+D (24903) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (24913) wifi:back home chan=<1,0>, current chan=<14,0>
+V (24913) wifi:ht20 freq=2412, chan=1
+D (24913) wifi:filter: set rx policy=4
+D (24913) wifi:first chan=1
+V (24913) wifi:scan_done: arg=0x0, status=0, cur_time=24941432, scan_id=128, scan state=0
+V (24923) wifi:call scan_done cb, arg=0x0
+D (24933) wifi:handoff_cb: status=0
+D (24933) wifi:clear rc list
+D (24933) wifi:clear blacklist
+D (24933) wifi:Send disconnect event, reason=201
+D (24943) wifi:connect status 1 -> 3
+D (24943) wifi:disable connect timer
+D (24943) wifi:clear scan ap list
+D (24953) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (24963) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (24973) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (24973) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (24983) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (24993) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (25003) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (25003) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (25013) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (25023) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (25023) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (25033) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (25033) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (25043) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (25053) wifi:Start wifi connect
+D (25053) wifi:connect status 3 -> 0
+D (25053) wifi:connect chan=0
+V (25063) wifi:nvs=0, ssid=badSSID, channel=6
+V (25063) wifi:ssid=badSSID match nvs 0, channel=6
+D (25073) wifi:first chan=6
+D (25073) wifi:connect status 0 -> 1
+D (25073) wifi:filter: set rx policy=3
+D (25083) wifi:clear scan ap list
+D (25083) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=25106178, index=0
+V (25093) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (25093) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (25103) wifi:change: chan<6,0>, dur<0,120>
+V (25103) wifi:ht20 freq=2437, chan=6
+V (25113) wifi:enter start op, arg=0x3fc94728
+V (25113) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (25123) wifi:scan specific ssid=badSSID
+V (25123) wifi:start max timer
+[0;32mI (25123) wifi station: retry to connect to the AP[0m
+[0;32mI (25133) wifi station: connect to the AP fail[0m
+D (25243) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (25243) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (25243) wifi:change: chan<1,0>, dur<0,120>
+V (25253) wifi:ht20 freq=2412, chan=1
+V (25253) wifi:enter start op, arg=0x3fc94728
+V (25263) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (25263) wifi:scan specific ssid=badSSID
+V (25273) wifi:start max timer
+D (25393) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (25393) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (25393) wifi:change: chan<2,0>, dur<0,120>
+V (25393) wifi:ht20 freq=2417, chan=2
+V (25403) wifi:enter start op, arg=0x3fc94728
+V (25403) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (25413) wifi:scan specific ssid=badSSID
+V (25413) wifi:start max timer
+D (25533) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (25533) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (25533) wifi:change: chan<3,0>, dur<0,120>
+V (25543) wifi:ht20 freq=2422, chan=3
+V (25543) wifi:enter start op, arg=0x3fc94728
+V (25553) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (25553) wifi:scan specific ssid=badSSID
+V (25563) wifi:start max timer
+D (25683) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (25683) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (25683) wifi:change: chan<4,0>, dur<0,120>
+V (25683) wifi:ht20 freq=2427, chan=4
+V (25693) wifi:enter start op, arg=0x3fc94728
+V (25693) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (25703) wifi:scan specific ssid=badSSID
+V (25703) wifi:start max timer
+D (25823) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (25823) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (25823) wifi:change: chan<5,0>, dur<0,120>
+V (25833) wifi:ht20 freq=2432, chan=5
+V (25833) wifi:enter start op, arg=0x3fc94728
+V (25833) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (25843) wifi:scan specific ssid=badSSID
+V (25853) wifi:start max timer
+D (25973) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (25973) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (25973) wifi:change: chan<7,0>, dur<0,120>
+V (25973) wifi:ht20 freq=2442, chan=7
+V (25983) wifi:enter start op, arg=0x3fc94728
+V (25983) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (25993) wifi:scan specific ssid=badSSID
+V (25993) wifi:start max timer
+D (26113) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (26113) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (26113) wifi:change: chan<8,0>, dur<0,120>
+V (26123) wifi:ht20 freq=2447, chan=8
+V (26123) wifi:enter start op, arg=0x3fc94728
+V (26123) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (26133) wifi:scan specific ssid=badSSID
+V (26143) wifi:start max timer
+D (26263) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (26263) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (26263) wifi:change: chan<9,0>, dur<0,120>
+V (26263) wifi:ht20 freq=2452, chan=9
+V (26273) wifi:enter start op, arg=0x3fc94728
+V (26273) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (26283) wifi:scan specific ssid=badSSID
+V (26283) wifi:start max timer
+D (26403) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (26403) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (26403) wifi:change: chan<10,0>, dur<0,120>
+V (26413) wifi:ht20 freq=2457, chan=10
+V (26413) wifi:enter start op, arg=0x3fc94728
+V (26413) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (26423) wifi:scan specific ssid=badSSID
+V (26433) wifi:start max timer
+D (26553) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (26553) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (26553) wifi:change: chan<11,0>, dur<0,120>
+V (26553) wifi:ht20 freq=2462, chan=11
+V (26563) wifi:enter start op, arg=0x3fc94728
+V (26563) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (26573) wifi:scan specific ssid=badSSID
+V (26573) wifi:start max timer
+D (26693) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (26693) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (26693) wifi:change: chan<12,0>, dur<360,360>
+V (26703) wifi:ht20 freq=2467, chan=12
+V (26703) wifi:enter start op, arg=0x3fc94728
+V (26713) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (26713) wifi:passive scan, listen only
+V (26723) wifi:start max timer
+D (27083) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (27083) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (27083) wifi:change: chan<13,0>, dur<360,360>
+V (27083) wifi:ht20 freq=2472, chan=13
+V (27093) wifi:enter start op, arg=0x3fc94728
+V (27093) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (27103) wifi:passive scan, listen only
+V (27103) wifi:start max timer
+D (27463) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (27463) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (27473) wifi:change: chan<14,0>, dur<360,360>
+V (27473) wifi:ht20 freq=2484, chan=14
+V (27473) wifi:enter start op, arg=0x3fc94728
+V (27483) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (27483) wifi:passive scan, listen only
+V (27493) wifi:start max timer
+D (27853) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (27853) wifi:back home chan=<1,0>, current chan=<14,0>
+V (27853) wifi:ht20 freq=2412, chan=1
+D (27853) wifi:filter: set rx policy=4
+D (27863) wifi:first chan=1
+V (27863) wifi:scan_done: arg=0x0, status=0, cur_time=27886246, scan_id=128, scan state=0
+V (27873) wifi:call scan_done cb, arg=0x0
+D (27873) wifi:handoff_cb: status=0
+D (27873) wifi:clear rc list
+D (27883) wifi:clear blacklist
+D (27883) wifi:Send disconnect event, reason=201
+D (27883) wifi:connect status 1 -> 3
+D (27893) wifi:disable connect timer
+D (27893) wifi:clear scan ap list
+D (27893) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (27903) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (27913) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (27923) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (27923) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (27933) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (27943) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (27953) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (27953) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (27963) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (27973) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (27973) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (27983) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (27993) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (27993) wifi:Start wifi connect
+D (28003) wifi:connect status 3 -> 0
+D (28003) wifi:connect chan=0
+V (28003) wifi:nvs=0, ssid=badSSID, channel=6
+V (28013) wifi:ssid=badSSID match nvs 0, channel=6
+D (28013) wifi:first chan=6
+D (28013) wifi:connect status 0 -> 1
+D (28023) wifi:filter: set rx policy=3
+D (28023) wifi:clear scan ap list
+D (28023) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=28050992, index=0
+V (28033) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (28043) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (28043) wifi:change: chan<6,0>, dur<0,120>
+V (28053) wifi:ht20 freq=2437, chan=6
+V (28053) wifi:enter start op, arg=0x3fc94728
+V (28063) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (28063) wifi:scan specific ssid=badSSID
+V (28073) wifi:start max timer
+[0;32mI (28073) wifi station: retry to connect to the AP[0m
+[0;32mI (28073) wifi station: connect to the AP fail[0m
+D (28193) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (28193) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (28193) wifi:change: chan<1,0>, dur<0,120>
+V (28193) wifi:ht20 freq=2412, chan=1
+V (28203) wifi:enter start op, arg=0x3fc94728
+V (28203) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (28213) wifi:scan specific ssid=badSSID
+V (28213) wifi:start max timer
+D (28333) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (28333) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (28333) wifi:change: chan<2,0>, dur<0,120>
+V (28343) wifi:ht20 freq=2417, chan=2
+V (28343) wifi:enter start op, arg=0x3fc94728
+V (28353) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (28353) wifi:scan specific ssid=badSSID
+V (28363) wifi:start max timer
+D (28483) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (28483) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (28483) wifi:change: chan<3,0>, dur<0,120>
+V (28483) wifi:ht20 freq=2422, chan=3
+V (28493) wifi:enter start op, arg=0x3fc94728
+V (28493) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (28503) wifi:scan specific ssid=badSSID
+V (28503) wifi:start max timer
+D (28623) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (28623) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (28623) wifi:change: chan<4,0>, dur<0,120>
+V (28633) wifi:ht20 freq=2427, chan=4
+V (28633) wifi:enter start op, arg=0x3fc94728
+V (28633) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (28643) wifi:scan specific ssid=badSSID
+V (28653) wifi:start max timer
+D (28773) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (28773) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (28773) wifi:change: chan<5,0>, dur<0,120>
+V (28773) wifi:ht20 freq=2432, chan=5
+V (28783) wifi:enter start op, arg=0x3fc94728
+V (28783) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (28793) wifi:scan specific ssid=badSSID
+V (28793) wifi:start max timer
+D (28913) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (28913) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (28913) wifi:change: chan<7,0>, dur<0,120>
+V (28923) wifi:ht20 freq=2442, chan=7
+V (28923) wifi:enter start op, arg=0x3fc94728
+V (28923) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (28933) wifi:scan specific ssid=badSSID
+V (28943) wifi:start max timer
+D (29063) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (29063) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (29063) wifi:change: chan<8,0>, dur<0,120>
+V (29063) wifi:ht20 freq=2447, chan=8
+V (29073) wifi:enter start op, arg=0x3fc94728
+V (29073) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (29083) wifi:scan specific ssid=badSSID
+V (29083) wifi:start max timer
+D (29203) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (29203) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (29203) wifi:change: chan<9,0>, dur<0,120>
+V (29213) wifi:ht20 freq=2452, chan=9
+V (29213) wifi:enter start op, arg=0x3fc94728
+V (29213) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (29223) wifi:scan specific ssid=badSSID
+V (29233) wifi:start max timer
+D (29353) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (29353) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (29353) wifi:change: chan<10,0>, dur<0,120>
+V (29353) wifi:ht20 freq=2457, chan=10
+V (29363) wifi:enter start op, arg=0x3fc94728
+V (29363) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (29373) wifi:scan specific ssid=badSSID
+V (29373) wifi:start max timer
+D (29493) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (29493) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (29493) wifi:change: chan<11,0>, dur<0,120>
+V (29503) wifi:ht20 freq=2462, chan=11
+V (29503) wifi:enter start op, arg=0x3fc94728
+V (29503) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (29513) wifi:scan specific ssid=badSSID
+V (29523) wifi:start max timer
+D (29643) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (29643) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (29643) wifi:change: chan<12,0>, dur<360,360>
+V (29643) wifi:ht20 freq=2467, chan=12
+V (29653) wifi:enter start op, arg=0x3fc94728
+V (29653) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (29663) wifi:passive scan, listen only
+V (29663) wifi:start max timer
+D (30023) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (30023) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (30023) wifi:change: chan<13,0>, dur<360,360>
+V (30033) wifi:ht20 freq=2472, chan=13
+V (30033) wifi:enter start op, arg=0x3fc94728
+V (30043) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (30043) wifi:passive scan, listen only
+V (30053) wifi:start max timer
+D (30413) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (30413) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (30413) wifi:change: chan<14,0>, dur<360,360>
+V (30413) wifi:ht20 freq=2484, chan=14
+V (30423) wifi:enter start op, arg=0x3fc94728
+V (30423) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (30433) wifi:passive scan, listen only
+V (30433) wifi:start max timer
+D (30793) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (30793) wifi:back home chan=<1,0>, current chan=<14,0>
+V (30803) wifi:ht20 freq=2412, chan=1
+D (30803) wifi:filter: set rx policy=4
+D (30803) wifi:first chan=1
+V (30803) wifi:scan_done: arg=0x0, status=0, cur_time=30830953, scan_id=128, scan state=0
+V (30813) wifi:call scan_done cb, arg=0x0
+D (30813) wifi:handoff_cb: status=0
+D (30823) wifi:clear rc list
+D (30823) wifi:clear blacklist
+D (30823) wifi:Send disconnect event, reason=201
+D (30833) wifi:connect status 1 -> 3
+D (30833) wifi:disable connect timer
+D (30833) wifi:clear scan ap list
+D (30843) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (30853) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (30863) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (30863) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (30873) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (30883) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (30893) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (30893) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (30903) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (30903) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (30913) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (30923) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (30923) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+V (30933) esp_adapter: thread sem get: sem=0x3fca5c38[0m
+D (30943) wifi:Start wifi connect
+D (30943) wifi:connect status 3 -> 0
+D (30943) wifi:connect chan=0
+V (30953) wifi:nvs=0, ssid=badSSID, channel=6
+V (30953) wifi:ssid=badSSID match nvs 0, channel=6
+D (30963) wifi:first chan=6
+D (30963) wifi:connect status 0 -> 1
+D (30963) wifi:filter: set rx policy=3
+D (30963) wifi:clear scan ap list
+D (30973) wifi:start scan: type=0x50f, priority=2, cb=0x42036872, arg=0x0, ss_state=0x1, time=30995699, index=0
+V (30983) wifi:inter_channel_timeout: arg=0x0, ss_state=0x1
+D (30983) wifi:perform scan: ss_state=0x9, chan<6,0>, dur<0,120>
+V (30993) wifi:change: chan<6,0>, dur<0,120>
+V (30993) wifi:ht20 freq=2437, chan=6
+V (31003) wifi:enter start op, arg=0x3fc94728
+V (31003) wifi:scan operation: state=0x3, chan<6,0>, arg=0x3fc94728, status=0
+V (31013) wifi:scan specific ssid=badSSID
+V (31013) wifi:start max timer
+[0;32mI (31013) wifi station: retry to connect to the AP[0m
+[0;32mI (31023) wifi station: connect to the AP fail[0m
+D (31133) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (31133) wifi:perform scan: ss_state=0x9, chan<1,0>, dur<0,120>
+V (31133) wifi:change: chan<1,0>, dur<0,120>
+V (31143) wifi:ht20 freq=2412, chan=1
+V (31143) wifi:enter start op, arg=0x3fc94728
+V (31143) wifi:scan operation: state=0x3, chan<1,0>, arg=0x3fc94728, status=0
+V (31153) wifi:scan specific ssid=badSSID
+V (31163) wifi:start max timer
+D (31283) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (31283) wifi:perform scan: ss_state=0x9, chan<2,0>, dur<0,120>
+V (31283) wifi:change: chan<2,0>, dur<0,120>
+V (31283) wifi:ht20 freq=2417, chan=2
+V (31293) wifi:enter start op, arg=0x3fc94728
+V (31293) wifi:scan operation: state=0x3, chan<2,0>, arg=0x3fc94728, status=0
+V (31303) wifi:scan specific ssid=badSSID
+V (31303) wifi:start max timer
+D (31423) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (31423) wifi:perform scan: ss_state=0x9, chan<3,0>, dur<0,120>
+V (31423) wifi:change: chan<3,0>, dur<0,120>
+V (31433) wifi:ht20 freq=2422, chan=3
+V (31433) wifi:enter start op, arg=0x3fc94728
+V (31433) wifi:scan operation: state=0x3, chan<3,0>, arg=0x3fc94728, status=0
+V (31443) wifi:scan specific ssid=badSSID
+V (31453) wifi:start max timer
+D (31573) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (31573) wifi:perform scan: ss_state=0x9, chan<4,0>, dur<0,120>
+V (31573) wifi:change: chan<4,0>, dur<0,120>
+V (31573) wifi:ht20 freq=2427, chan=4
+V (31583) wifi:enter start op, arg=0x3fc94728
+V (31583) wifi:scan operation: state=0x3, chan<4,0>, arg=0x3fc94728, status=0
+V (31593) wifi:scan specific ssid=badSSID
+V (31593) wifi:start max timer
+D (31713) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (31713) wifi:perform scan: ss_state=0x9, chan<5,0>, dur<0,120>
+V (31713) wifi:change: chan<5,0>, dur<0,120>
+V (31723) wifi:ht20 freq=2432, chan=5
+V (31723) wifi:enter start op, arg=0x3fc94728
+V (31723) wifi:scan operation: state=0x3, chan<5,0>, arg=0x3fc94728, status=0
+V (31733) wifi:scan specific ssid=badSSID
+V (31743) wifi:start max timer
+D (31863) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (31863) wifi:perform scan: ss_state=0x9, chan<7,0>, dur<0,120>
+V (31863) wifi:change: chan<7,0>, dur<0,120>
+V (31863) wifi:ht20 freq=2442, chan=7
+V (31873) wifi:enter start op, arg=0x3fc94728
+V (31873) wifi:scan operation: state=0x3, chan<7,0>, arg=0x3fc94728, status=0
+V (31883) wifi:scan specific ssid=badSSID
+V (31883) wifi:start max timer
+D (32003) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (32003) wifi:perform scan: ss_state=0x9, chan<8,0>, dur<0,120>
+V (32003) wifi:change: chan<8,0>, dur<0,120>
+V (32013) wifi:ht20 freq=2447, chan=8
+V (32013) wifi:enter start op, arg=0x3fc94728
+V (32013) wifi:scan operation: state=0x3, chan<8,0>, arg=0x3fc94728, status=0
+V (32023) wifi:scan specific ssid=badSSID
+V (32033) wifi:start max timer
+D (32153) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (32153) wifi:perform scan: ss_state=0x9, chan<9,0>, dur<0,120>
+V (32153) wifi:change: chan<9,0>, dur<0,120>
+V (32153) wifi:ht20 freq=2452, chan=9
+V (32163) wifi:enter start op, arg=0x3fc94728
+V (32163) wifi:scan operation: state=0x3, chan<9,0>, arg=0x3fc94728, status=0
+V (32173) wifi:scan specific ssid=badSSID
+V (32173) wifi:start max timer
+D (32293) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (32293) wifi:perform scan: ss_state=0x9, chan<10,0>, dur<0,120>
+V (32293) wifi:change: chan<10,0>, dur<0,120>
+V (32303) wifi:ht20 freq=2457, chan=10
+V (32303) wifi:enter start op, arg=0x3fc94728
+V (32303) wifi:scan operation: state=0x3, chan<10,0>, arg=0x3fc94728, status=0
+V (32313) wifi:scan specific ssid=badSSID
+V (32323) wifi:start max timer
+D (32443) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (32443) wifi:perform scan: ss_state=0x9, chan<11,0>, dur<0,120>
+V (32443) wifi:change: chan<11,0>, dur<0,120>
+V (32443) wifi:ht20 freq=2462, chan=11
+V (32453) wifi:enter start op, arg=0x3fc94728
+V (32453) wifi:scan operation: state=0x3, chan<11,0>, arg=0x3fc94728, status=0
+V (32463) wifi:scan specific ssid=badSSID
+V (32463) wifi:start max timer
+D (32583) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (32583) wifi:perform scan: ss_state=0x9, chan<12,0>, dur<360,360>
+V (32583) wifi:change: chan<12,0>, dur<360,360>
+V (32593) wifi:ht20 freq=2467, chan=12
+V (32593) wifi:enter start op, arg=0x3fc94728
+V (32603) wifi:scan operation: state=0x3, chan<12,0>, arg=0x3fc94728, status=0
+V (32603) wifi:passive scan, listen only
+V (32613) wifi:start max timer
+D (32973) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (32973) wifi:perform scan: ss_state=0x9, chan<13,0>, dur<360,360>
+V (32973) wifi:change: chan<13,0>, dur<360,360>
+V (32973) wifi:ht20 freq=2472, chan=13
+V (32983) wifi:enter start op, arg=0x3fc94728
+V (32983) wifi:scan operation: state=0x3, chan<13,0>, arg=0x3fc94728, status=0
+V (32993) wifi:passive scan, listen only
+V (32993) wifi:start max timer
+D (33353) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+D (33353) wifi:perform scan: ss_state=0x9, chan<14,0>, dur<360,360>
+V (33353) wifi:change: chan<14,0>, dur<360,360>
+V (33363) wifi:ht20 freq=2484, chan=14
+V (33363) wifi:enter start op, arg=0x3fc94728
+V (33373) wifi:scan operation: state=0x3, chan<14,0>, arg=0x3fc94728, status=0
+V (33373) wifi:passive scan, listen only
+V (33383) wifi:start max timer
+D (33743) wifi:scan end: arg=0x0, status=0, ss_state=0x3
+V (33743) wifi:back home chan=<1,0>, current chan=<14,0>
+V (33743) wifi:ht20 freq=2412, chan=1
+D (33743) wifi:filter: set rx policy=4
+D (33753) wifi:first chan=1
+V (33753) wifi:scan_done: arg=0x0, status=0, cur_time=33775693, scan_id=128, scan state=0
+V (33763) wifi:call scan_done cb, arg=0x0
+D (33763) wifi:handoff_cb: status=0
+D (33763) wifi:clear rc list
+D (33773) wifi:clear blacklist
+D (33773) wifi:Send disconnect event, reason=201
+D (33773) wifi:connect status 1 -> 3
+D (33783) wifi:disable connect timer
+D (33783) wifi:clear scan ap list
+D (33783) event: running post WIFI_EVENT:5 with handler 0x42014876 and context 0x3fc9d728 on loop 0x3fc9c51c[0m
+D (33793) esp_netif_handlers: esp_netif action disconnected with netif0x3fc9d444 from event_id=5[0m
+D (33803) esp_netif_lwip: check: remote, if=0x3fc9d444 fn=0x42011a7a
+[0m
+D (33813) esp_netif_lwip: esp_netif_down_api esp_netif:0x3fc9d444[0m
+D (33813) esp_netif_lwip: esp_netif_start_ip_lost_timer esp_netif:0x3fc9d444[0m
+D (33823) esp_netif_lwip: if0x3fc9d444 start ip lost tmr: no need start because netif=0x3fc9d4c8 interval=120 ip=0[0m
+D (33833) esp_netif_lwip: check: local, if=0x3fc9d444 fn=0x4201228e
+[0m
+D (33843) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9d444[0m
+V (33843) esp_netif_objects: esp_netif_next_unsafe 0x0[0m
+V (33853) esp_netif_lwip: esp_netif_is_netif_up esp_netif:0x3fc9d444[0m
+V (33863) esp_netif_objects: esp_netif_next_unsafe 0x3fc9d444[0m
+D (33863) esp_netif_lwip: call api in lwip: ret=0x0, give sem[0m
+D (33873) event: running post WIFI_EVENT:5 with handler 0x420081e2 and context 0x3fca554c on loop 0x3fc9c51c[0m
+[0;32mI (33883) wifi station: connect to the AP fail[0m
+[0;32mI (33883) wifi station: Failed to connect to SSID:badSSID, password:wrongPassword[0m
+[0;32mI (33893) main_task: Returned from app_main()[0m
